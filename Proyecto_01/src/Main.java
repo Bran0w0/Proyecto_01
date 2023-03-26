@@ -2,7 +2,8 @@
 public class Main {
 
 	public static void main(String[] args) {
-System.out.println("Inicio del proyecto");
+		Ventana ventanita = new Ventana();
+//System.out.println("Inicio del proyecto");
 	}
 
 }
