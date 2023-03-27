@@ -201,26 +201,17 @@ public class Ventana extends JFrame{
 		JMenu cuenta = new JMenu("Cuenta");
 		JMenu usuarios = new JMenu("Usuarios");
 		JMenu ayuda = new JMenu("Ayuda");
-		JMenuItem miCuenta = new JMenuItem("Mi cuenta");
-		JMenuItem cerrarSesion = new JMenuItem("Cerrar sesión");
-
-		JMenuItem listaDeUsuarios = new JMenuItem("Lista de usuarios");
-		JMenuItem crearUsuario = new JMenuItem("Crear Usuarios");
-
-		JMenuItem comoCrearUsuario = new JMenuItem("¿Como crear usuarios?");
-		//BARRA
+		JMenuItem usuario = new JMenuItem("¿Cómo crear un usuario?");
+		JMenuItem sistema = new JMenuItem("¿Cómo acceder al sistema?");
+		
 		menu.add(barra);
-		//MENUS
+
+
 		barra.add(cuenta);
 		barra.add(usuarios);
 		barra.add(ayuda);
-		//ITEMS
-		cuenta.add(miCuenta);
-		cuenta.add(cerrarSesion);
-		usuarios.add(listaDeUsuarios);
-		usuarios.add(crearUsuario);
-		ayuda.add(comoCrearUsuario);
-		
+		ayuda.add(usuario);
+		ayuda.add(sistema);
 		
 		//titulo
 		JLabel titleR = new JLabel("Registro nuevo usuario",JLabel.CENTER);
