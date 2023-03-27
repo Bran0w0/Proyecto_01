@@ -48,7 +48,7 @@ public class Ventana extends JFrame{
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLayout(null);
-		this.getContentPane().setBackground(Color.decode("#76D09A"));
+		this.getContentPane().setBackground(Color.cyan);
 		
 		limpiarVentana();
 		
@@ -144,13 +144,13 @@ public class Ventana extends JFrame{
 		JButton btnAccess = new JButton("Iniciar Sesión");
 		btnAccess.setSize(120,40);
 		btnAccess.setLocation(250,205);
-		btnAccess.setBackground(Color.decode("#3DADFF"));
+		btnAccess.setBackground(Color.decode("#05AAFC"));
 		jp1.add(btnAccess);
 		
 		JButton btnCancelar = new JButton("Cancelar");
 		btnCancelar.setSize(120,40);
 		btnCancelar.setLocation(120,205);
-		btnCancelar.setBackground(Color.decode("#E48080"));
+		btnCancelar.setBackground(Color.decode("#ED2C61"));
 		jp1.add(btnCancelar);
 		
 		btnCancelar.addActionListener(new ActionListener() {
@@ -262,7 +262,7 @@ public class Ventana extends JFrame{
 		registro.setBackground(Color.decode("#76D09A"));
 		
 		//titulo
-		JLabel titleR = new JLabel("Crear Usuario",JLabel.CENTER);
+		JLabel titleR = new JLabel("Crear Usuario:",JLabel.CENTER);
 		titleR.setFont(new Font("Comic Sans", Font.BOLD,24));
 		titleR.setSize(280, 40);
 		titleR.setLocation(100, 20);
@@ -310,13 +310,13 @@ public class Ventana extends JFrame{
 		
 		JTextField name = new JTextField("");
 		name.setSize(250, 40);
-		name.setLocation(120, 220);
+		name.setLocation(120, 250);
 		registro.add(name);
 		
 		JLabel tag4 = new JLabel("Confirmar contraseña:",JLabel.LEFT);
 		tag4.setFont(new Font("Comic Sans", Font.BOLD,14));
 		tag4.setSize(250, 20);
-		tag4.setLocation(120, 260);
+		tag4.setLocation(120, 300);
 		tag4.setOpaque(false);
 		//tag4.setBackground(Color.black);
 		tag4.setForeground(Color.white);
@@ -324,22 +324,15 @@ public class Ventana extends JFrame{
 		
 		JTextField lastname = new JTextField("");
 		lastname.setSize(250, 40);
-		lastname.setLocation(120, 280);
+		lastname.setLocation(120, 340);
 		registro.add(lastname);
 		
-		JButton crear = new JButton("Crear Usuario");
-		crear.setSize(115,40);
-		crear.setLocation(255, 390);
-		crear.setBackground(Color.decode("#3DADFF"));
-		registro.add(crear);
+		JButton btnAdd = new JButton("R E G I S T R O");
+		btnAdd.setSize(250,40);
+		btnAdd.setLocation(120, 390);
+		registro.add(btnAdd);
 		
-		JButton cancelar = new JButton("Cancelar");
-		cancelar.setSize(115,40);
-		cancelar.setLocation(120, 390);
-		cancelar.setBackground(Color.decode("#E48080"));
-		registro.add(cancelar);
-		
-		crear.addActionListener(new ActionListener() {
+		btnAdd.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {

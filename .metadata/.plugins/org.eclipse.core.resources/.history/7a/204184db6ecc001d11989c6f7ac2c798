@@ -144,13 +144,13 @@ public class Ventana extends JFrame{
 		JButton btnAccess = new JButton("Iniciar Sesión");
 		btnAccess.setSize(120,40);
 		btnAccess.setLocation(250,205);
-		btnAccess.setBackground(Color.decode("#3DADFF"));
+		btnAccess.setBackground(Color.decode("#05AAFC"));
 		jp1.add(btnAccess);
 		
 		JButton btnCancelar = new JButton("Cancelar");
 		btnCancelar.setSize(120,40);
 		btnCancelar.setLocation(120,205);
-		btnCancelar.setBackground(Color.decode("#E48080"));
+		btnCancelar.setBackground(Color.decode("#ED2C61"));
 		jp1.add(btnCancelar);
 		
 		btnCancelar.addActionListener(new ActionListener() {
@@ -262,7 +262,7 @@ public class Ventana extends JFrame{
 		registro.setBackground(Color.decode("#76D09A"));
 		
 		//titulo
-		JLabel titleR = new JLabel("Crear Usuario",JLabel.CENTER);
+		JLabel titleR = new JLabel("Crear Usuario:",JLabel.CENTER);
 		titleR.setFont(new Font("Comic Sans", Font.BOLD,24));
 		titleR.setSize(280, 40);
 		titleR.setLocation(100, 20);
@@ -330,7 +330,6 @@ public class Ventana extends JFrame{
 		JButton crear = new JButton("Crear Usuario");
 		crear.setSize(115,40);
 		crear.setLocation(255, 390);
-		crear.setBackground(Color.decode("#3DADFF"));
 		registro.add(crear);
 		
 		JButton cancelar = new JButton("Cancelar");

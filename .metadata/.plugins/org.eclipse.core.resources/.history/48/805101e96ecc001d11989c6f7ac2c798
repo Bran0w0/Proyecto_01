@@ -262,7 +262,7 @@ public class Ventana extends JFrame{
 		registro.setBackground(Color.decode("#76D09A"));
 		
 		//titulo
-		JLabel titleR = new JLabel("Crear Usuario",JLabel.CENTER);
+		JLabel titleR = new JLabel("Crear Usuario:",JLabel.CENTER);
 		titleR.setFont(new Font("Comic Sans", Font.BOLD,24));
 		titleR.setSize(280, 40);
 		titleR.setLocation(100, 20);
