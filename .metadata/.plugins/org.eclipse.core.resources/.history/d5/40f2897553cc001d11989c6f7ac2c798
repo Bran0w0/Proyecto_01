@@ -205,7 +205,7 @@ public class Ventana extends JFrame{
 		JMenuItem cerrarSesion = new JMenuItem("Cerrar sesión");
 
 		JMenuItem listaDeUsuarios = new JMenuItem("Lista de usuarios");
-		JMenuItem crearUsuario = new JMenuItem("Crear Usuario");
+		JMenuItem crearUsuario = new JMenuItem("Crear Usuarios");
 
 		JMenuItem comoCrearUsuario = new JMenuItem("¿Como crear usuarios?");
 		//BARRA
@@ -260,11 +260,11 @@ public class Ventana extends JFrame{
 		anterior = actual;
 		actual = "registro";
 		
-		JPanel registro = new JPanel();
-		registro.setSize(500, 700);
-		registro.setLocation(0, 0);
-		registro.setLayout(null);
-		registro.setBackground(Color.decode("#C45EDF"));
+		JPanel jp2 = new JPanel();
+		jp2.setSize(500, 700);
+		jp2.setLocation(0, 0);
+		jp2.setLayout(null);
+		jp2.setBackground(Color.decode("#C45EDF"));
 		
 		//titulo
 		JLabel titleR = new JLabel("Registro nuevo usuario",JLabel.CENTER);
@@ -273,7 +273,7 @@ public class Ventana extends JFrame{
 		titleR.setLocation(100, 20);
 		titleR.setOpaque(true);
 		titleR.setBackground(Color.green);
-		registro.add(titleR);
+		jp2.add(titleR);
 		
 		JLabel tag1R = new JLabel("Ingrese el nombre de usuario: ",JLabel.CENTER);
 		tag1R.setSize(250, 20);
@@ -281,12 +281,12 @@ public class Ventana extends JFrame{
 		tag1R.setOpaque(true);
 		tag1R.setBackground(Color.black);
 		tag1R.setForeground(Color.white);
-		registro.add(tag1R);
+		jp2.add(tag1R);
 		
 		JTextField usernameR = new JTextField("");
 		usernameR.setSize(250, 40);
 		usernameR.setLocation(120, 100);
-		registro.add(usernameR);
+		jp2.add(usernameR);
 		
 		JLabel tag2R = new JLabel("Ingrese el correo electrónico: ",JLabel.CENTER);
 		tag2R.setSize(250, 20);
@@ -294,12 +294,12 @@ public class Ventana extends JFrame{
 		tag2R.setOpaque(true);
 		tag2R.setBackground(Color.black);
 		tag2R.setForeground(Color.white);
-		registro.add(tag2R);
+		jp2.add(tag2R);
 		
 		JPasswordField passwordR = new JPasswordField();
 		passwordR.setSize(250, 40);
 		passwordR.setLocation(120, 160);
-		registro.add(passwordR);
+		jp2.add(passwordR);
 		
 		JLabel tag3 = new JLabel("Ingrese el nombre: ",JLabel.CENTER);
 		tag3.setSize(250, 20);
@@ -307,12 +307,12 @@ public class Ventana extends JFrame{
 		tag3.setOpaque(true);
 		tag3.setBackground(Color.black);
 		tag3.setForeground(Color.white);
-		registro.add(tag3);
+		jp2.add(tag3);
 		
 		JTextField name = new JTextField("");
 		name.setSize(250, 40);
 		name.setLocation(120, 250);
-		registro.add(name);
+		jp2.add(name);
 		
 		JLabel tag4 = new JLabel("Ingrese el nombre: ",JLabel.CENTER);
 		tag4.setSize(250, 20);
@@ -320,17 +320,17 @@ public class Ventana extends JFrame{
 		tag4.setOpaque(true);
 		tag4.setBackground(Color.black);
 		tag4.setForeground(Color.white);
-		registro.add(tag4);
+		jp2.add(tag4);
 		
 		JTextField lastname = new JTextField("");
 		lastname.setSize(250, 40);
 		lastname.setLocation(120, 340);
-		registro.add(lastname);
+		jp2.add(lastname);
 		
 		JButton btnAdd = new JButton("R E G I S T R O");
 		btnAdd.setSize(250,40);
 		btnAdd.setLocation(120, 390);
-		registro.add(btnAdd);
+		jp2.add(btnAdd);
 		
 		btnAdd.addActionListener(new ActionListener() {
 
@@ -347,6 +347,6 @@ public class Ventana extends JFrame{
 			
 		});
 		
-		return registro;
+		return jp2;
 	}
 }
