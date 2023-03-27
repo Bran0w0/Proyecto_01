@@ -88,14 +88,6 @@ public class Ventana extends JFrame{
 			this.repaint();
 			this.revalidate();
 		}
-		if(actual.equals("ayuda")){
-			panel = ayuda();
-			
-			this.add(panel);
-			
-			this.repaint();
-			this.revalidate();
-		}
 		
 	}
 	
@@ -242,19 +234,7 @@ public class Ventana extends JFrame{
 			}
 			
 		});
-		comoCrearUsuario.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "ayuda";
-				
-				limpiarVentana();
-			}
-			
-		});
+		
 		
 		//titulo
 		JLabel titleR = new JLabel("Hola Usuario",JLabel.CENTER);
@@ -269,65 +249,7 @@ public class Ventana extends JFrame{
 
 		return menu;
 	}
-public JPanel ayuda() {
-		
-		anterior = actual;
-		actual = "ayuda";
-		
-		JPanel ayuda = new JPanel();
-		ayuda.setSize(500, 700);
-		ayuda.setLocation(0, 0);
-		ayuda.setLayout(null);
-		ayuda.setBackground(Color.decode("#76D09A"));
-		
-		//titulo
-		JLabel titleR = new JLabel("¿Como crear un usuario?",JLabel.CENTER);
-		titleR.setFont(new Font("Comic Sans", Font.BOLD,20));
-		titleR.setSize(280, 40);
-		titleR.setLocation(100, 20);
-		titleR.setOpaque(false);
-		titleR.setForeground(Color.white);
-		//titleR.setBackground(Color.green);
-		ayuda.add(titleR);
-		
-		JTextArea tag1R = new JTextArea("1. Hacer click en la opción ''Usuarios'' \nen el menú superior"
-								+ "\n2. Haver click en la opción ''Crear Usuario'' \nen el menú desplegado"
-								+ "\n3. Llenar los campos solicitados"
-								+ "\n4. Hacer click en el botón ''Crear Usuario''"
-								+ "\n5. Listo, el usuario se ha creado");
-		tag1R.setFont(new Font("Comic Sans", Font.BOLD,14));
-		tag1R.setSize(295, 150);
-		tag1R.setLocation(75, 80);
-		tag1R.setOpaque(false);
-		//tag1R.setBackground(Color.black);
-		tag1R.setForeground(Color.white);
-		ayuda.add(tag1R);
-		
-		
-		
-		JButton crearAhora = new JButton("Crear un usuario ahora");
-		crearAhora.setFont(new Font("Comic Sans", Font.BOLD,14));
-		crearAhora.setSize(215,40);
-		crearAhora.setLocation(140, 390);
-		crearAhora.setBackground(Color.decode("#3DADFF"));
-		ayuda.add(crearAhora);
-		crearAhora.addActionListener(new ActionListener() {
 
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "registro";
-				
-				limpiarVentana();
-				
-			}
-			
-		});
-		
-		return ayuda;
-	}
 	public JPanel registro() {
 		
 		anterior = actual;
@@ -417,21 +339,6 @@ public JPanel ayuda() {
 		cancelar.setBackground(Color.decode("#E48080"));
 		registro.add(cancelar);
 		
-		cancelar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "menu";
-				
-				limpiarVentana();
-				
-			}
-			
-		});
-		
 		crear.addActionListener(new ActionListener() {
 
 			@Override
@@ -439,7 +346,7 @@ public JPanel ayuda() {
 				// TODO Auto-generated method stub
 				
 				anterior = actual;
-				actual = "menu";
+				actual = "login";
 				
 				limpiarVentana();
 				

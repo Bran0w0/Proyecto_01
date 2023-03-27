@@ -417,21 +417,6 @@ public JPanel ayuda() {
 		cancelar.setBackground(Color.decode("#E48080"));
 		registro.add(cancelar);
 		
-		cancelar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "menu";
-				
-				limpiarVentana();
-				
-			}
-			
-		});
-		
 		crear.addActionListener(new ActionListener() {
 
 			@Override

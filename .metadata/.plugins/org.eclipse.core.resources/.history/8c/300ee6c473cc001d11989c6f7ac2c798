@@ -305,10 +305,9 @@ public JPanel ayuda() {
 		
 		
 		
-		JButton crearAhora = new JButton("Crear un usuario ahora");
-		crearAhora.setFont(new Font("Comic Sans", Font.BOLD,14));
+		JButton crearAhora = new JButton("C r e a r  u n  u s u a r i o  a h o r a");
 		crearAhora.setSize(215,40);
-		crearAhora.setLocation(140, 390);
+		crearAhora.setLocation(155, 390);
 		crearAhora.setBackground(Color.decode("#3DADFF"));
 		ayuda.add(crearAhora);
 		crearAhora.addActionListener(new ActionListener() {
@@ -416,21 +415,6 @@ public JPanel ayuda() {
 		cancelar.setLocation(120, 390);
 		cancelar.setBackground(Color.decode("#E48080"));
 		registro.add(cancelar);
-		
-		cancelar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "menu";
-				
-				limpiarVentana();
-				
-			}
-			
-		});
 		
 		crear.addActionListener(new ActionListener() {
 

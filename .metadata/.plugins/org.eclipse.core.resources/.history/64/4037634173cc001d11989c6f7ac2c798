@@ -296,8 +296,8 @@ public JPanel ayuda() {
 								+ "\n4. Hacer click en el botón ''Crear Usuario''"
 								+ "\n5. Listo, el usuario se ha creado");
 		tag1R.setFont(new Font("Comic Sans", Font.BOLD,14));
-		tag1R.setSize(295, 150);
-		tag1R.setLocation(75, 80);
+		tag1R.setSize(290, 100);
+		tag1R.setLocation(80, 80);
 		tag1R.setOpaque(false);
 		//tag1R.setBackground(Color.black);
 		tag1R.setForeground(Color.white);
@@ -305,20 +305,26 @@ public JPanel ayuda() {
 		
 		
 		
-		JButton crearAhora = new JButton("Crear un usuario ahora");
-		crearAhora.setFont(new Font("Comic Sans", Font.BOLD,14));
-		crearAhora.setSize(215,40);
-		crearAhora.setLocation(140, 390);
-		crearAhora.setBackground(Color.decode("#3DADFF"));
-		ayuda.add(crearAhora);
-		crearAhora.addActionListener(new ActionListener() {
+		JButton crear = new JButton("Crear Usuario");
+		crear.setSize(115,40);
+		crear.setLocation(255, 390);
+		crear.setBackground(Color.decode("#3DADFF"));
+		ayuda.add(crear);
+		
+		JButton cancelar = new JButton("Cancelar");
+		cancelar.setSize(115,40);
+		cancelar.setLocation(120, 390);
+		cancelar.setBackground(Color.decode("#E48080"));
+		ayuda.add(cancelar);
+		
+		crear.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				
 				anterior = actual;
-				actual = "registro";
+				actual = "login";
 				
 				limpiarVentana();
 				
@@ -416,21 +422,6 @@ public JPanel ayuda() {
 		cancelar.setLocation(120, 390);
 		cancelar.setBackground(Color.decode("#E48080"));
 		registro.add(cancelar);
-		
-		cancelar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "menu";
-				
-				limpiarVentana();
-				
-			}
-			
-		});
 		
 		crear.addActionListener(new ActionListener() {
 
