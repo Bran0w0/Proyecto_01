@@ -130,16 +130,14 @@ public class Ventana extends JFrame{
 		password.setLocation(120, 160);
 		jp1.add(password);
 		
-		JButton btnAccess = new JButton("Iniciar Sesión");
-		btnAccess.setSize(120,40);
-		btnAccess.setLocation(250,205);
-		btnAccess.setBackground(Color.decode("#05AAFC"));
+		JButton btnAccess = new JButton("A C C E D E R");
+		btnAccess.setSize(125,40);
+		btnAccess.setLocation(240,205);
 		jp1.add(btnAccess);
 		
-		JButton btnCancelar = new JButton("Cancelar");
-		btnCancelar.setSize(120,40);
+		JButton btnCancelar = new JButton("A C C E D E R");
+		btnCancelar.setSize(125,40);
 		btnCancelar.setLocation(120,205);
-		btnCancelar.setBackground(Color.decode("#ED2C61"));
 		jp1.add(btnCancelar);
 		
 		btnAccess.addActionListener(new ActionListener() {

@@ -133,13 +133,13 @@ public class Ventana extends JFrame{
 		JButton btnAccess = new JButton("Iniciar Sesión");
 		btnAccess.setSize(120,40);
 		btnAccess.setLocation(250,205);
-		btnAccess.setBackground(Color.decode("#05AAFC"));
+		btnAccess.setBackground(Color.decode("#00A2E8"));
 		jp1.add(btnAccess);
 		
 		JButton btnCancelar = new JButton("Cancelar");
 		btnCancelar.setSize(120,40);
 		btnCancelar.setLocation(120,205);
-		btnCancelar.setBackground(Color.decode("#ED2C61"));
+		btnCancelar.setBackground(Color.decode("#ED1C24"));
 		jp1.add(btnCancelar);
 		
 		btnAccess.addActionListener(new ActionListener() {
