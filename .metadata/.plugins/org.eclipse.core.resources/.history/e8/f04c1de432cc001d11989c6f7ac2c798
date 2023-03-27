@@ -100,7 +100,7 @@ public class Ventana extends JFrame{
 		title.setFont(new Font("Comic Sans", Font.BOLD,24));
 		title.setSize(280, 40);
 		title.setLocation(100, 20);
-		title.setOpaque(false);
+		title.setOpaque(true);
 		title.setForeground(Color.white);
 		//title.setBackground(Color.green);
 		jp1.add(title);

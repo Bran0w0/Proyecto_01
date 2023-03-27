@@ -96,13 +96,12 @@ public class Ventana extends JFrame{
 		jp1.setBackground(Color.decode("#5ED6DF"));
 		
 		//titulo
-		JLabel title = new JLabel("Accede a tu cuenta",JLabel.CENTER);
-		title.setFont(new Font("Comic Sans", Font.BOLD,24));
+		JLabel title = new JLabel("Registro nuevo usuario",JLabel.CENTER);
+		title.setFont(new Font("Comic Sans", Font.BOLD,20));
 		title.setSize(280, 40);
 		title.setLocation(100, 20);
-		title.setOpaque(false);
-		title.setForeground(Color.white);
-		//title.setBackground(Color.green);
+		title.setOpaque(true);
+		title.setBackground(Color.green);
 		jp1.add(title);
 		
 		JLabel tag1 = new JLabel("Ingrese el nombre de usuario: ",JLabel.CENTER);
