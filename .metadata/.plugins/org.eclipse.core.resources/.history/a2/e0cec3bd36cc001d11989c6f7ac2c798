@@ -174,7 +174,7 @@ public class Ventana extends JFrame{
 				// TODO Auto-generated method stub
 				
 				anterior = actual;
-				actual = "menu";
+				actual = "registro";
 				
 				limpiarVentana();
 				

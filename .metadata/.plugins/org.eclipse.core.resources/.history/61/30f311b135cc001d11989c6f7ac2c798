@@ -80,14 +80,6 @@ public class Ventana extends JFrame{
 			this.repaint();
 			this.revalidate();
 		}
-		if(actual.equals("menu")){
-			panel = menu();
-			
-			this.add(panel);
-			
-			this.repaint();
-			this.revalidate();
-		}
 		
 	}
 	
@@ -153,20 +145,6 @@ public class Ventana extends JFrame{
 		btnCancelar.setBackground(Color.decode("#ED2C61"));
 		jp1.add(btnCancelar);
 		
-		btnCancelar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "menu";
-				
-				limpiarVentana();
-				
-			}
-			
-		});
 		btnAccess.addActionListener(new ActionListener() {
 
 			@Override
@@ -174,7 +152,7 @@ public class Ventana extends JFrame{
 				// TODO Auto-generated method stub
 				
 				anterior = actual;
-				actual = "menu";
+				actual = "registro";
 				
 				limpiarVentana();
 				
@@ -189,7 +167,7 @@ public class Ventana extends JFrame{
 	
 	public JPanel menu() {
 		anterior = actual;
-		actual = "menu";
+		actual = "registro";
 		
 		JPanel jp3 = new JPanel();
 		jp3.setSize(500, 700);
@@ -206,19 +184,71 @@ public class Ventana extends JFrame{
 		titleR.setBackground(Color.green);
 		jp3.add(titleR);
 		
-		JButton btnlogin = new JButton("login");
-		btnlogin.setSize(250,40);
-		btnlogin.setLocation(120, 390);
-		jp3.add(btnlogin);
+		JLabel tag1R = new JLabel("Ingrese el nombre de usuario: ",JLabel.CENTER);
+		tag1R.setSize(250, 20);
+		tag1R.setLocation(120, 80);
+		tag1R.setOpaque(true);
+		tag1R.setBackground(Color.black);
+		tag1R.setForeground(Color.white);
+		jp3.add(tag1R);
 		
-		btnlogin.addActionListener(new ActionListener() {
+		JTextField usernameR = new JTextField("");
+		usernameR.setSize(250, 40);
+		usernameR.setLocation(120, 100);
+		jp3.add(usernameR);
+		
+		JLabel tag2R = new JLabel("Ingrese el correo electrónico: ",JLabel.CENTER);
+		tag2R.setSize(250, 20);
+		tag2R.setLocation(120, 140);
+		tag2R.setOpaque(true);
+		tag2R.setBackground(Color.black);
+		tag2R.setForeground(Color.white);
+		jp3.add(tag2R);
+		
+		JPasswordField passwordR = new JPasswordField();
+		passwordR.setSize(250, 40);
+		passwordR.setLocation(120, 160);
+		jp3.add(passwordR);
+		
+		JLabel tag3 = new JLabel("Ingrese el nombre: ",JLabel.CENTER);
+		tag3.setSize(250, 20);
+		tag3.setLocation(120, 210);
+		tag3.setOpaque(true);
+		tag3.setBackground(Color.black);
+		tag3.setForeground(Color.white);
+		jp3.add(tag3);
+		
+		JTextField name = new JTextField("");
+		name.setSize(250, 40);
+		name.setLocation(120, 250);
+		jp3.add(name);
+		
+		JLabel tag4 = new JLabel("Ingrese el nombre: ",JLabel.CENTER);
+		tag4.setSize(250, 20);
+		tag4.setLocation(120, 300);
+		tag4.setOpaque(true);
+		tag4.setBackground(Color.black);
+		tag4.setForeground(Color.white);
+		jp3.add(tag4);
+		
+		JTextField lastname = new JTextField("");
+		lastname.setSize(250, 40);
+		lastname.setLocation(120, 340);
+		jp3.add(lastname);
+		
+		JButton btnAdd = new JButton("R E G I S T R O");
+		btnAdd.setSize(250,40);
+		btnAdd.setLocation(120, 390);
+		jp3.add(btnAdd);
+		
+		btnAdd.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				
 				anterior = actual;
-				actual = "login";
+				actual = "menu";
 				
 				limpiarVentana();
 				
@@ -229,7 +259,7 @@ public class Ventana extends JFrame{
 		return jp3;
 	}
 
-	public JPanel registro() {
+	/*public JPanel registro() {
 		
 		anterior = actual;
 		actual = "registro";
@@ -322,5 +352,5 @@ public class Ventana extends JFrame{
 		});
 		
 		return jp2;
-	}
+	}*/
 }

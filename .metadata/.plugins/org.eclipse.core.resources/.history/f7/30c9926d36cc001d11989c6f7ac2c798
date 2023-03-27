@@ -174,7 +174,7 @@ public class Ventana extends JFrame{
 				// TODO Auto-generated method stub
 				
 				anterior = actual;
-				actual = "menu";
+				actual = "registro";
 				
 				limpiarVentana();
 				
@@ -206,19 +206,19 @@ public class Ventana extends JFrame{
 		titleR.setBackground(Color.green);
 		jp3.add(titleR);
 		
-		JButton btnlogin = new JButton("login");
-		btnlogin.setSize(250,40);
-		btnlogin.setLocation(120, 390);
-		jp3.add(btnlogin);
+		JButton btnAdd = new JButton("login");
+		btnAdd.setSize(250,40);
+		btnAdd.setLocation(120, 390);
+		jp3.add(btnAdd);
 		
-		btnlogin.addActionListener(new ActionListener() {
+		btnAdd.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				
 				anterior = actual;
-				actual = "login";
+				actual = "menu";
 				
 				limpiarVentana();
 				

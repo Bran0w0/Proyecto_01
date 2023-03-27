@@ -80,14 +80,6 @@ public class Ventana extends JFrame{
 			this.repaint();
 			this.revalidate();
 		}
-		if(actual.equals("menu")){
-			panel = menu();
-			
-			this.add(panel);
-			
-			this.repaint();
-			this.revalidate();
-		}
 		
 	}
 	
@@ -153,20 +145,6 @@ public class Ventana extends JFrame{
 		btnCancelar.setBackground(Color.decode("#ED2C61"));
 		jp1.add(btnCancelar);
 		
-		btnCancelar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "menu";
-				
-				limpiarVentana();
-				
-			}
-			
-		});
 		btnAccess.addActionListener(new ActionListener() {
 
 			@Override
@@ -174,7 +152,7 @@ public class Ventana extends JFrame{
 				// TODO Auto-generated method stub
 				
 				anterior = actual;
-				actual = "menu";
+				actual = "registro";
 				
 				limpiarVentana();
 				
@@ -185,48 +163,6 @@ public class Ventana extends JFrame{
 		this.add(jp1);
 		return jp1;
 		
-	}
-	
-	public JPanel menu() {
-		anterior = actual;
-		actual = "menu";
-		
-		JPanel jp3 = new JPanel();
-		jp3.setSize(500, 700);
-		jp3.setLocation(0, 0);
-		jp3.setLayout(null);
-		jp3.setBackground(Color.decode("#C45EDF"));
-		
-		//titulo
-		JLabel titleR = new JLabel("Registro nuevo usuario",JLabel.CENTER);
-		titleR.setFont(new Font("Comic Sans", Font.BOLD,20));
-		titleR.setSize(280, 40);
-		titleR.setLocation(100, 20);
-		titleR.setOpaque(true);
-		titleR.setBackground(Color.green);
-		jp3.add(titleR);
-		
-		JButton btnlogin = new JButton("login");
-		btnlogin.setSize(250,40);
-		btnlogin.setLocation(120, 390);
-		jp3.add(btnlogin);
-		
-		btnlogin.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "login";
-				
-				limpiarVentana();
-				
-			}
-			
-		});
-	
-		return jp3;
 	}
 
 	public JPanel registro() {
