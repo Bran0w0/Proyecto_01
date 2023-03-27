@@ -119,7 +119,7 @@ public class Ventana extends JFrame{
 		username.setLocation(120, 100);
 		jp1.add(username);
 		
-		JLabel tag2 = new JLabel("Contraseña de acceso",JLabel.LEFT);
+		JLabel tag2 = new JLabel("Contraseña de acceso:",JLabel.LEFT);
 		tag2.setFont(new Font("Comic Sans", Font.BOLD,14));
 		tag2.setSize(250, 20);
 		tag2.setLocation(120, 140);

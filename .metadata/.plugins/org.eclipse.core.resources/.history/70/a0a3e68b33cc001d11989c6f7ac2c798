@@ -106,7 +106,6 @@ public class Ventana extends JFrame{
 		jp1.add(title);
 		
 		JLabel tag1 = new JLabel("Nombre de usuario",JLabel.LEFT);
-		tag1.setFont(new Font("Comic Sans", Font.BOLD,14));
 		tag1.setSize(250, 20);
 		tag1.setLocation(120, 80);
 		tag1.setOpaque(false);
@@ -119,8 +118,7 @@ public class Ventana extends JFrame{
 		username.setLocation(120, 100);
 		jp1.add(username);
 		
-		JLabel tag2 = new JLabel("Contraseña de acceso",JLabel.LEFT);
-		tag2.setFont(new Font("Comic Sans", Font.BOLD,14));
+		JLabel tag2 = new JLabel("Contraseña de acceso:",JLabel.LEFT);
 		tag2.setSize(250, 20);
 		tag2.setLocation(120, 140);
 		tag2.setOpaque(false);

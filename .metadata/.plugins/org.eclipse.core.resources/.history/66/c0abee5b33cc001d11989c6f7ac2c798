@@ -105,12 +105,11 @@ public class Ventana extends JFrame{
 		//title.setBackground(Color.green);
 		jp1.add(title);
 		
-		JLabel tag1 = new JLabel("Nombre de usuario",JLabel.LEFT);
-		tag1.setFont(new Font("Comic Sans", Font.BOLD,14));
+		JLabel tag1 = new JLabel("Ingrese el nombre de usuario: ",JLabel.CENTER);
 		tag1.setSize(250, 20);
 		tag1.setLocation(120, 80);
-		tag1.setOpaque(false);
-		//tag1.setBackground(Color.black);
+		tag1.setOpaque(true);
+		tag1.setBackground(Color.black);
 		tag1.setForeground(Color.white);
 		jp1.add(tag1);
 		
@@ -119,12 +118,11 @@ public class Ventana extends JFrame{
 		username.setLocation(120, 100);
 		jp1.add(username);
 		
-		JLabel tag2 = new JLabel("Contraseña de acceso",JLabel.LEFT);
-		tag2.setFont(new Font("Comic Sans", Font.BOLD,14));
+		JLabel tag2 = new JLabel("Ingrese la contraseña: ",JLabel.CENTER);
 		tag2.setSize(250, 20);
 		tag2.setLocation(120, 140);
-		tag2.setOpaque(false);
-		//tag2.setBackground(Color.black);
+		tag2.setOpaque(true);
+		tag2.setBackground(Color.black);
 		tag2.setForeground(Color.white);
 		jp1.add(tag2);
 		
