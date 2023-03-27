@@ -221,20 +221,6 @@ public class Ventana extends JFrame{
 		usuarios.add(crearUsuario);
 		ayuda.add(comoCrearUsuario);
 		
-		crearUsuario.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "registro";
-				
-				limpiarVentana();
-			}
-			
-		});
-		
 		
 		//titulo
 		JLabel titleR = new JLabel("Registro nuevo usuario",JLabel.CENTER);
@@ -260,6 +246,7 @@ public class Ventana extends JFrame{
 				actual = "login";
 				
 				limpiarVentana();
+				
 			}
 			
 		});

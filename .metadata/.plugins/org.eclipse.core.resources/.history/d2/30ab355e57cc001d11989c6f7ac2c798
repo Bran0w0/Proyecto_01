@@ -228,7 +228,7 @@ public class Ventana extends JFrame{
 				// TODO Auto-generated method stub
 				
 				anterior = actual;
-				actual = "registro";
+				actual = "login";
 				
 				limpiarVentana();
 			}
