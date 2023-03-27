@@ -160,7 +160,7 @@ public class Ventana extends JFrame{
 				// TODO Auto-generated method stub
 				
 				anterior = actual;
-				actual = "registro";
+				actual = "menu";
 				
 				limpiarVentana();
 				
@@ -197,22 +197,6 @@ public class Ventana extends JFrame{
 		menu.setLayout(null);
 		menu.setBackground(Color.decode("#C45EDF"));
 		
-		JMenuBar barra=new JMenuBar();
-		JMenu cuenta = new JMenu("Cuenta");
-		JMenu usuarios = new JMenu("Usuarios");
-		JMenu ayuda = new JMenu("Ayuda");
-		JMenuItem usuario = new JMenuItem("¿Cómo crear un usuario?");
-		JMenuItem sistema = new JMenuItem("¿Cómo acceder al sistema?");
-		
-		menu.add(barra);
-
-
-		barra.add(cuenta);
-		barra.add(usuarios);
-		barra.add(ayuda);
-		ayuda.add(usuario);
-		ayuda.add(sistema);
-		
 		//titulo
 		JLabel titleR = new JLabel("Registro nuevo usuario",JLabel.CENTER);
 		titleR.setFont(new Font("Comic Sans", Font.BOLD,20));
@@ -241,8 +225,7 @@ public class Ventana extends JFrame{
 			}
 			
 		});
-		setJMenuBar(barra);
-
+	
 		return menu;
 	}
 

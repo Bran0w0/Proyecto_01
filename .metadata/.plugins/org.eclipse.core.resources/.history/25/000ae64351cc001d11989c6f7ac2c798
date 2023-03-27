@@ -160,7 +160,7 @@ public class Ventana extends JFrame{
 				// TODO Auto-generated method stub
 				
 				anterior = actual;
-				actual = "registro";
+				actual = "menu";
 				
 				limpiarVentana();
 				
@@ -191,27 +191,11 @@ public class Ventana extends JFrame{
 		anterior = actual;
 		actual = "menu";
 		
-		JPanel menu = new JPanel();
-		menu.setSize(500, 700);
-		menu.setLocation(0, 0);
-		menu.setLayout(null);
-		menu.setBackground(Color.decode("#C45EDF"));
-		
-		JMenuBar barra=new JMenuBar();
-		JMenu cuenta = new JMenu("Cuenta");
-		JMenu usuarios = new JMenu("Usuarios");
-		JMenu ayuda = new JMenu("Ayuda");
-		JMenuItem usuario = new JMenuItem("¿Cómo crear un usuario?");
-		JMenuItem sistema = new JMenuItem("¿Cómo acceder al sistema?");
-		
-		menu.add(barra);
-
-
-		barra.add(cuenta);
-		barra.add(usuarios);
-		barra.add(ayuda);
-		ayuda.add(usuario);
-		ayuda.add(sistema);
+		JPanel jp3 = new JPanel();
+		jp3.setSize(500, 700);
+		jp3.setLocation(0, 0);
+		jp3.setLayout(null);
+		jp3.setBackground(Color.decode("#C45EDF"));
 		
 		//titulo
 		JLabel titleR = new JLabel("Registro nuevo usuario",JLabel.CENTER);
@@ -220,12 +204,12 @@ public class Ventana extends JFrame{
 		titleR.setLocation(100, 20);
 		titleR.setOpaque(true);
 		titleR.setBackground(Color.green);
-		menu.add(titleR);
+		jp3.add(titleR);
 		
 		JButton btnlogin = new JButton("login");
 		btnlogin.setSize(250,40);
 		btnlogin.setLocation(120, 390);
-		menu.add(btnlogin);
+		jp3.add(btnlogin);
 		
 		btnlogin.addActionListener(new ActionListener() {
 
@@ -241,9 +225,8 @@ public class Ventana extends JFrame{
 			}
 			
 		});
-		setJMenuBar(barra);
-
-		return menu;
+	
+		return jp3;
 	}
 
 	public JPanel registro() {

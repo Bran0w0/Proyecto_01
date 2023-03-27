@@ -241,8 +241,7 @@ public class Ventana extends JFrame{
 			}
 			
 		});
-		setJMenuBar(barra);
-
+	
 		return menu;
 	}
 
