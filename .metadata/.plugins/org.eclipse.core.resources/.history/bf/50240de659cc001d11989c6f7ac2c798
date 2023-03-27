@@ -101,7 +101,7 @@ public class Ventana extends JFrame{
 		jp1.setSize(500, 600);
 		jp1.setLocation(0, 0);
 		jp1.setLayout(null);
-		jp1.setBackground(Color.decode("#76D09A"));
+		jp1.setBackground(Color.decode("#5ED6DF"));
 		
 		//titulo
 		JLabel title = new JLabel("Accede a tu cuenta",JLabel.CENTER);
@@ -195,7 +195,7 @@ public class Ventana extends JFrame{
 		menu.setSize(500, 700);
 		menu.setLocation(0, 0);
 		menu.setLayout(null);
-		menu.setBackground(Color.decode("#76D09A"));
+		menu.setBackground(Color.decode("#5ED6DF"));
 		
 		JMenuBar barra=new JMenuBar();
 		JMenu cuenta = new JMenu("Cuenta");
@@ -241,8 +241,8 @@ public class Ventana extends JFrame{
 		titleR.setFont(new Font("Comic Sans", Font.BOLD,20));
 		titleR.setSize(280, 40);
 		titleR.setLocation(100, 120);
-		titleR.setOpaque(false);
-		//titleR.setBackground(Color.green);
+		titleR.setOpaque(true);
+		titleR.setBackground(Color.green);
 		menu.add(titleR);
 		
 		setJMenuBar(barra);
@@ -259,7 +259,7 @@ public class Ventana extends JFrame{
 		registro.setSize(500, 700);
 		registro.setLocation(0, 0);
 		registro.setLayout(null);
-		registro.setBackground(Color.decode("#76D09A"));
+		registro.setBackground(Color.decode("#C45EDF"));
 		
 		//titulo
 		JLabel titleR = new JLabel("Registro nuevo usuario",JLabel.CENTER);
