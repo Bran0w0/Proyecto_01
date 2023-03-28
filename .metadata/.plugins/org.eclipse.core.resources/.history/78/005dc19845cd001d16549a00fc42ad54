@@ -195,7 +195,7 @@ public class Ventana extends JFrame{
 				
 			}
 		});
-		/*btnAccess.addActionListener(new ActionListener() {
+		btnAccess.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -208,7 +208,7 @@ public class Ventana extends JFrame{
 				
 			}
 			
-		});*/
+		});
 		//------------------------------------------------------------------------------------------------------------------------------------
 
 		btnAccess.addActionListener(new ActionListener() {

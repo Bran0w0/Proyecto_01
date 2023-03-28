@@ -195,7 +195,7 @@ public class Ventana extends JFrame{
 				
 			}
 		});
-		/*btnAccess.addActionListener(new ActionListener() {
+		btnAccess.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -208,67 +208,7 @@ public class Ventana extends JFrame{
 				
 			}
 			
-		});*/
-		//------------------------------------------------------------------------------------------------------------------------------------
-
-		btnAccess.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				String email = username.getText();
-				String pwd = new String (password.getPassword());
-				
-				BufferedReader reader;
-				
-				Boolean flag = false; 
-				
-				try{
-					
-					FileReader file = new FileReader("users.txt");
-					reader = new BufferedReader(file);
-					
-					String line = reader.readLine();
-					
-					while(line != null) {
-						
-						String data [] = line.split(",");
-						 
-						if( email.equals(data[2]) ) {
-							if( pwd.equals(data[3]) ) {
-								flag = true;
-							}
-						} 
-						
-						line = reader.readLine();
-						
-					}
-					
-					if(flag) {
-						JOptionPane.showMessageDialog(null,"Correcto","Bienvenido al sistema", JOptionPane.INFORMATION_MESSAGE );
-
-						anterior = actual;
-						actual = "menu";
-						
-						limpiarVentana();
-						//jp3.remove(); 
-						
-						repaint();
-						revalidate();
-						
-						
-					}else {
-						JOptionPane.showMessageDialog(null,"Error","Fuera Perro!", JOptionPane.ERROR_MESSAGE );
-					}
-					
-					
-				} catch(IOException e1) {
-					e1.printStackTrace();
-				}
-			}
-			
 		});
-		//------------------------------------------------------------------------------------------------------------------------------------
 		
 		this.add(jp1);
 		return jp1;
