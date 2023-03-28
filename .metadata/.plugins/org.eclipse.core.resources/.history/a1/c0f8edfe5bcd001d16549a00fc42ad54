@@ -729,8 +729,8 @@ public class Ventana extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				lista.getSelectedIndex();
-				seleccion = (String) lista.getSelectedItem();
-				crear.setText("Editar a "+seleccion);
+				seleccion = (String) lista.getActionCommand();
+				crear.setText(seleccion);
 				//seleccion = obtener;
 			}
 			

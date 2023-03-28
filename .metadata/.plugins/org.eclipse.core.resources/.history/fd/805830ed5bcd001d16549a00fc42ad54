@@ -711,14 +711,7 @@ public class Ventana extends JFrame{
 		} catch(IOException e1) {
 			e1.printStackTrace();
 		} 		
-		
- 		JButton crear = new JButton("Editar a "+ seleccion);
- 		crear.setFont(new Font("Comic Sans", Font.BOLD,14));
- 		crear.setSize(320, 25);
- 		crear.setLocation(80, 150);
- 		crear.setBackground(Color.decode("#31C148"));
- 		crear.setForeground(Color.decode("#FFFFFF"));
- 		
+	
 		JComboBox lista = new JComboBox(emailG);
 		lista.setBounds(80, 100,320, 40);
 		listaUsuarios.add(lista);
@@ -729,18 +722,23 @@ public class Ventana extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				lista.getSelectedIndex();
-				seleccion = (String) lista.getSelectedItem();
-				crear.setText("Editar a "+seleccion);
+				seleccion = (String) lista.getActionCommand();
+				
 				//seleccion = obtener;
 			}
 			
 		});
          
- 		listaUsuarios.add(crear);
 
  		//----------------------------------------------------------------------------
 
-
+ 		JButton crear = new JButton("Editar a "+ seleccion);
+ 		crear.setFont(new Font("Comic Sans", Font.BOLD,14));
+ 		crear.setSize(320, 25);
+ 		crear.setLocation(80, 150);
+ 		crear.setBackground(Color.decode("#31C148"));
+ 		crear.setForeground(Color.decode("#FFFFFF"));
+ 		listaUsuarios.add(crear);
 		
         listaUsuarios.repaint();
         listaUsuarios.revalidate();

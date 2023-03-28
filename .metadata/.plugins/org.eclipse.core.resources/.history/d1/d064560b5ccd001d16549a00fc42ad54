@@ -730,7 +730,7 @@ public class Ventana extends JFrame{
 				// TODO Auto-generated method stub
 				lista.getSelectedIndex();
 				seleccion = (String) lista.getSelectedItem();
-				crear.setText("Editar a "+seleccion);
+				crear.setText(seleccion);
 				//seleccion = obtener;
 			}
 			
