@@ -697,7 +697,7 @@ public class Ventana extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				int resp = JOptionPane.showConfirmDialog(null, "¿Esta seguro?", "Alerta!", JOptionPane.YES_NO_OPTION);
-				if(resp == 0) {
+				if(resp == 1) {
 				for(int z = 0; z<10; z++) {
 					if(seleccion.equals(data[z][2])) {
 						data[z][0]=null;

@@ -18,7 +18,7 @@ public class Ventana extends JFrame{
 		this.setVisible(true);
 		this.setSize(500, 600);
 		this.setLocationRelativeTo(null);
-		this.setTitle("No Dormir");
+		this.setTitle("Hola mundo");
 		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLayout(null);
@@ -696,8 +696,6 @@ public class Ventana extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				int resp = JOptionPane.showConfirmDialog(null, "¿Esta seguro?", "Alerta!", JOptionPane.YES_NO_OPTION);
-				if(resp == 0) {
 				for(int z = 0; z<10; z++) {
 					if(seleccion.equals(data[z][2])) {
 						data[z][0]=null;
@@ -753,11 +751,6 @@ public class Ventana extends JFrame{
 							e1.printStackTrace();
 						} 		
 					}
-						}
-				//IF	
-				}else {
-					JOptionPane.showMessageDialog(null, "Operación Cancelada","Exito",JOptionPane.ERROR_MESSAGE );
-
 				}
 			}
 			
