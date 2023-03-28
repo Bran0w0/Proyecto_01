@@ -231,19 +231,20 @@ public class Ventana extends JFrame{
 					}
 					
 					if(flag) {
-						JOptionPane.showMessageDialog(null,"Bienvenido "+email,"Correcto", JOptionPane.INFORMATION_MESSAGE );
+						JOptionPane.showMessageDialog(null,"Correcto","Bienvenido al sistema", JOptionPane.INFORMATION_MESSAGE );
 
 						anterior = actual;
 						actual = "menu";
 						
 						limpiarVentana();
+						//jp3.remove(); 
 						
 						repaint();
 						revalidate();
 						
 						
 					}else {
-						JOptionPane.showMessageDialog(null,"El usuario y contraseña no coinciden","Error", JOptionPane.ERROR_MESSAGE );
+						JOptionPane.showMessageDialog(null,"Error","Fuera Perro!", JOptionPane.ERROR_MESSAGE );
 					}
 					
 					
@@ -819,7 +820,7 @@ public class Ventana extends JFrame{
 				if((email.contains("@")&& pwd.equals(pwd2)) && !(nombre.equals("") || email.equals("") || pwd.equals("") || apellido.equals(""))) 
 
 				{
-					JOptionPane.showMessageDialog(null, "Usuario creado","Correcto",JOptionPane.INFORMATION_MESSAGE );
+				JOptionPane.showMessageDialog(null, "Sistema");
 
 				FileWriter writer ;
 				
@@ -839,7 +840,7 @@ public class Ventana extends JFrame{
 				}
 				
 				}else {
-					JOptionPane.showMessageDialog(null, "El usuario no se ha podido crear","Error" ,JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "Verifique que los datos estén correctos");
 				}
 			}
 		});

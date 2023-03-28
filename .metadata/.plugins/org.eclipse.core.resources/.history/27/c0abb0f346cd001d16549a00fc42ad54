@@ -819,7 +819,7 @@ public class Ventana extends JFrame{
 				if((email.contains("@")&& pwd.equals(pwd2)) && !(nombre.equals("") || email.equals("") || pwd.equals("") || apellido.equals(""))) 
 
 				{
-					JOptionPane.showMessageDialog(null, "Usuario creado","Correcto",JOptionPane.INFORMATION_MESSAGE );
+					JOptionPane.showMessageDialog(null, "Usuario creado","",JOptionPane.INFORMATION_MESSAGE );
 
 				FileWriter writer ;
 				
@@ -839,7 +839,7 @@ public class Ventana extends JFrame{
 				}
 				
 				}else {
-					JOptionPane.showMessageDialog(null, "El usuario no se ha podido crear","Error" ,JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(null, "El usuario no se ha podido crear","" ,JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
