@@ -469,7 +469,7 @@ public class Ventana extends JFrame{
 		JButton actualizar = new JButton("Actualizar datos");
 		actualizar.setFont(new Font("Comic Sans", Font.BOLD,14));
 		actualizar.setSize(200,35);
-		actualizar.setLocation(255, 450);
+		actualizar.setLocation(255, 420);
 		actualizar.setBackground(Color.decode("#31C148"));
 		actualizar.setForeground(Color.decode("#FFFFFF"));
 		miCuenta.add(actualizar);
@@ -477,7 +477,7 @@ public class Ventana extends JFrame{
 		JButton cancelar = new JButton("Cancelar");
 		cancelar.setFont(new Font("Comic Sans", Font.BOLD,14));
 		cancelar.setSize(200,35);
-		cancelar.setLocation(35, 450);
+		cancelar.setLocation(35, 420);
 		cancelar.setBackground(Color.decode("#E48080"));
 		cancelar.setForeground(Color.decode("#FFFFFF"));
 		miCuenta.add(cancelar);

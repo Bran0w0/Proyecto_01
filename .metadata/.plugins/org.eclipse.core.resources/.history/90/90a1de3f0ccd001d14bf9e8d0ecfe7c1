@@ -409,75 +409,29 @@ public class Ventana extends JFrame{
 		//titleR.setBackground(Color.green);
 		miCuenta.add(titleR);
 		
-		//REQUISITOS
-		JLabel nombre = new JLabel("Nombre:",JLabel.LEFT);
-		nombre.setFont(new Font("Comic Sans", Font.BOLD,18));
-		nombre.setSize(280, 40);
-		nombre.setLocation(60, 160);
-		nombre.setOpaque(false);
-		nombre.setForeground(Color.white);
+		//SUBTITULO
+		JLabel titleS = new JLabel("Nombre",JLabel.LEFT);
+		titleS.setFont(new Font("Comic Sans", Font.BOLD,18));
+		titleS.setSize(280, 40);
+		titleS.setLocation(60, 160);
+		titleS.setOpaque(false);
+		titleS.setForeground(Color.white);
 		//titleR.setBackground(Color.green);
-		miCuenta.add(nombre);
+		miCuenta.add(titleS);
 		
-		JTextField nombreT = new JTextField("");
-		nombreT.setSize(360, 25);
-		nombreT.setLocation(60, 200);
-		miCuenta.add(nombreT);
 		
-		JLabel apellidos = new JLabel("Apellidos:",JLabel.LEFT);
-		apellidos.setFont(new Font("Comic Sans", Font.BOLD,18));
-		apellidos.setSize(360, 40);
-		apellidos.setLocation(60, 230);
-		apellidos.setOpaque(false);
-		apellidos.setForeground(Color.white);
-		//titleR.setBackground(Color.green);
-		miCuenta.add(apellidos);
-		
-		JTextField apellidosT = new JTextField("");
-		apellidosT.setSize(360, 25);
-		apellidosT.setLocation(60, 270);
-		miCuenta.add(apellidosT);
-		
-		JLabel email = new JLabel("Email:",JLabel.LEFT);
-		email.setFont(new Font("Comic Sans", Font.BOLD,18));
-		email.setSize(360, 40);
-		email.setLocation(60, 300);
-		email.setOpaque(false);
-		email.setForeground(Color.white);
-		//titleR.setBackground(Color.green);
-		miCuenta.add(email);
-		
-		JTextField emailT = new JTextField("");
-		emailT.setSize(360, 25);
-		emailT.setLocation(60, 340);
-		miCuenta.add(emailT);
-
-		JLabel contraseña = new JLabel("Contraseña:",JLabel.LEFT);
-		contraseña.setFont(new Font("Comic Sans", Font.BOLD,18));
-		contraseña.setSize(360, 40);
-		contraseña.setLocation(60, 370);
-		contraseña.setOpaque(false);
-		contraseña.setForeground(Color.white);
-		//titleR.setBackground(Color.green);
-		miCuenta.add(contraseña);
-		
-		JTextField contraseñaT = new JTextField("");
-		contraseñaT.setSize(360, 25);
-		contraseñaT.setLocation(60, 410);
-		miCuenta.add(contraseñaT);
-		
-		JButton actualizar = new JButton("Actualizar datos");
-		actualizar.setFont(new Font("Comic Sans", Font.BOLD,14));
-		actualizar.setSize(200,35);
-		actualizar.setLocation(255, 450);
-		actualizar.setBackground(Color.decode("#31C148"));
-		actualizar.setForeground(Color.decode("#FFFFFF"));
-		miCuenta.add(actualizar);
+		JButton Actualizar = new JButton("Actualizar datos");
+		Actualizar.setFont(new Font("Comic Sans", Font.BOLD,14));
+		Actualizar.setSize(200,35);
+		Actualizar.setLocation(255, 420);
+		Actualizar.setBackground(Color.decode("#31C148"));
+		Actualizar.setForeground(Color.decode("#FFFFFF"));
+		miCuenta.add(Actualizar);
 		
 		JButton cancelar = new JButton("Cancelar");
 		cancelar.setFont(new Font("Comic Sans", Font.BOLD,14));
 		cancelar.setSize(200,35);
-		cancelar.setLocation(35, 450);
+		cancelar.setLocation(35, 420);
 		cancelar.setBackground(Color.decode("#E48080"));
 		cancelar.setForeground(Color.decode("#FFFFFF"));
 		miCuenta.add(cancelar);

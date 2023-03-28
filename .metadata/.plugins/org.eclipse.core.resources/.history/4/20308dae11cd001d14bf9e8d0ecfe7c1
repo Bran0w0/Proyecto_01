@@ -455,29 +455,29 @@ public class Ventana extends JFrame{
 		JLabel contraseña = new JLabel("Contraseña:",JLabel.LEFT);
 		contraseña.setFont(new Font("Comic Sans", Font.BOLD,18));
 		contraseña.setSize(360, 40);
-		contraseña.setLocation(60, 370);
+		contraseña.setLocation(60, 300);
 		contraseña.setOpaque(false);
 		contraseña.setForeground(Color.white);
 		//titleR.setBackground(Color.green);
 		miCuenta.add(contraseña);
 		
 		JTextField contraseñaT = new JTextField("");
-		contraseñaT.setSize(360, 25);
-		contraseñaT.setLocation(60, 410);
+		emacontraseñaTilT.setSize(360, 25);
+		contraseñaT.setLocation(60, 340);
 		miCuenta.add(contraseñaT);
 		
-		JButton actualizar = new JButton("Actualizar datos");
-		actualizar.setFont(new Font("Comic Sans", Font.BOLD,14));
-		actualizar.setSize(200,35);
-		actualizar.setLocation(255, 450);
-		actualizar.setBackground(Color.decode("#31C148"));
-		actualizar.setForeground(Color.decode("#FFFFFF"));
-		miCuenta.add(actualizar);
+		JButton Actualizar = new JButton("Actualizar datos");
+		Actualizar.setFont(new Font("Comic Sans", Font.BOLD,14));
+		Actualizar.setSize(200,35);
+		Actualizar.setLocation(255, 420);
+		Actualizar.setBackground(Color.decode("#31C148"));
+		Actualizar.setForeground(Color.decode("#FFFFFF"));
+		miCuenta.add(Actualizar);
 		
 		JButton cancelar = new JButton("Cancelar");
 		cancelar.setFont(new Font("Comic Sans", Font.BOLD,14));
 		cancelar.setSize(200,35);
-		cancelar.setLocation(35, 450);
+		cancelar.setLocation(35, 420);
 		cancelar.setBackground(Color.decode("#E48080"));
 		cancelar.setForeground(Color.decode("#FFFFFF"));
 		miCuenta.add(cancelar);
