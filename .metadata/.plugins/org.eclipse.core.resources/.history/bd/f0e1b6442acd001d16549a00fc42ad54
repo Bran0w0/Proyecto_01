@@ -578,64 +578,6 @@ public class Ventana extends JFrame{
 			
 		});
 		
-		//----------------------------------------------------------------------------
-
-		String[] columnNames = { "Nombre", "Apellido", "Correo", "Password" };
-		
-		String[][] data = new String[10][4]; 
-		int i = 0;
-		BufferedReader reader;  
-		
-		try{
-			
-			FileReader file = new FileReader("users.txt");
-			reader = new BufferedReader(file);
-			
-			String line = reader.readLine();
-			
-			while(line != null) {
-				
-				String arreglo [] = line.split(",");
-				
-				data[i] = arreglo;
-				
-				line = reader.readLine();
-				i++;
-				
-			}
-			
-			// Initializing the JTable
-			 JTable j = new JTable(data, columnNames);
-	         j.setBounds(30, 40, 200, 300);
-	 
-	         // adding it to JScrollPane
-	         JScrollPane sp = new JScrollPane(j);
-	         sp.setSize(300, 400);
-	         sp.setLocation(80, 150);
-	         listaUsuarios.add(sp);
-	         
-	         listaUsuarios.repaint();
-	         listaUsuarios.revalidate();
-		} catch(IOException e1) {
-			e1.printStackTrace();
-		} 		
-		
-		
-		/* JTable j = new JTable(data, columnNames);
-         j.setBounds(30, 40, 200, 300);
- 
-         // adding it to JScrollPane
-         JScrollPane sp = new JScrollPane(j);
-         sp.setSize(300, 400);
-         sp.setLocation(120, 200);
-         listaUsuarios.add(sp);*/
-         
-         listaUsuarios.repaint();
-         listaUsuarios.revalidate();
- 		//----------------------------------------------------------------------------
-
-		
-		
 		
 		return listaUsuarios;
 	}

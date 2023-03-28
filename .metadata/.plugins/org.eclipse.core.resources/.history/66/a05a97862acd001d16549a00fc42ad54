@@ -578,63 +578,78 @@ public class Ventana extends JFrame{
 			
 		});
 		
-		//----------------------------------------------------------------------------
+		JButton btnShow = new JButton("M O S T R A R");
+		btnShow.setSize(250, 40);
+		btnShow.setLocation(120, 100);
+		listaUsuarios.add(btnShow);
+		
+		btnShow.addActionListener(new ActionListener() {
 
-		String[] columnNames = { "Nombre", "Apellido", "Correo", "Password" };
-		
-		String[][] data = new String[10][4]; 
-		int i = 0;
-		BufferedReader reader;  
-		
-		try{
-			
-			FileReader file = new FileReader("users.txt");
-			reader = new BufferedReader(file);
-			
-			String line = reader.readLine();
-			
-			while(line != null) {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
 				
-				String arreglo [] = line.split(",");
+				String[] columnNames = { "Nombre", "Apellido", "Correo", "Password" };
 				
-				data[i] = arreglo;
+				String[][] data = new String[10][4]; 
+				int i = 0;
+				BufferedReader reader;  
 				
-				line = reader.readLine();
-				i++;
-				
+				try{
+					
+					FileReader file = new FileReader("users.txt");
+					reader = new BufferedReader(file);
+					
+					String line = reader.readLine();
+					
+					while(line != null) {
+						
+						String arreglo [] = line.split(",");
+						
+						data[i] = arreglo;
+						
+						line = reader.readLine();
+						i++;
+						
+					}
+					
+					// Initializing the JTable
+					 JTable j = new JTable(data, columnNames);
+			         j.setBounds(30, 40, 200, 300);
+			 
+			         // adding it to JScrollPane
+			         JScrollPane sp = new JScrollPane(j);
+			         sp.setSize(300, 400);
+			         sp.setLocation(120, 200);
+			         listaUsuarios.add(sp);
+			         
+			         listaUsuarios.repaint();
+			         listaUsuarios.revalidate();
+			        
+			         //repaint();
+			         //revalidate();
+					
+					/*if(flag) {
+						JOptionPane.showMessageDialog(null,"Correcto","Bienvenido al sistema", JOptionPane.INFORMATION_MESSAGE );
+						
+						remove(jp1);
+						add(jp3);
+						
+						repaint();
+						revalidate();
+						
+						
+					}else {
+						JOptionPane.showMessageDialog(null,"Error","Fuera Perro!", JOptionPane.ERROR_MESSAGE );
+					}*/
+					
+					
+				} catch(IOException e1) {
+					e1.printStackTrace();
+				} 
 			}
 			
-			// Initializing the JTable
-			 JTable j = new JTable(data, columnNames);
-	         j.setBounds(30, 40, 200, 300);
-	 
-	         // adding it to JScrollPane
-	         JScrollPane sp = new JScrollPane(j);
-	         sp.setSize(300, 400);
-	         sp.setLocation(80, 150);
-	         listaUsuarios.add(sp);
-	         
-	         listaUsuarios.repaint();
-	         listaUsuarios.revalidate();
-		} catch(IOException e1) {
-			e1.printStackTrace();
-		} 		
-		
-		
-		/* JTable j = new JTable(data, columnNames);
-         j.setBounds(30, 40, 200, 300);
- 
-         // adding it to JScrollPane
-         JScrollPane sp = new JScrollPane(j);
-         sp.setSize(300, 400);
-         sp.setLocation(120, 200);
-         listaUsuarios.add(sp);*/
-         
-         listaUsuarios.repaint();
-         listaUsuarios.revalidate();
- 		//----------------------------------------------------------------------------
-
-		
+		});
 		
 		
 		return listaUsuarios;

@@ -578,6 +578,10 @@ public class Ventana extends JFrame{
 			
 		});
 		
+		JButton btnShow = new JButton("M O S T R A R");
+		btnShow.setSize(115,40);
+		btnShow.setLocation(220, 390);
+		listaUsuarios.add(btnShow);
 		//----------------------------------------------------------------------------
 
 		String[] columnNames = { "Nombre", "Apellido", "Correo", "Password" };
@@ -611,7 +615,7 @@ public class Ventana extends JFrame{
 	         // adding it to JScrollPane
 	         JScrollPane sp = new JScrollPane(j);
 	         sp.setSize(300, 400);
-	         sp.setLocation(80, 150);
+	         sp.setLocation(120, 200);
 	         listaUsuarios.add(sp);
 	         
 	         listaUsuarios.repaint();
@@ -621,14 +625,14 @@ public class Ventana extends JFrame{
 		} 		
 		
 		
-		/* JTable j = new JTable(data, columnNames);
+		 JTable j = new JTable(data, columnNames);
          j.setBounds(30, 40, 200, 300);
  
          // adding it to JScrollPane
          JScrollPane sp = new JScrollPane(j);
          sp.setSize(300, 400);
          sp.setLocation(120, 200);
-         listaUsuarios.add(sp);*/
+         listaUsuarios.add(sp);
          
          listaUsuarios.repaint();
          listaUsuarios.revalidate();
