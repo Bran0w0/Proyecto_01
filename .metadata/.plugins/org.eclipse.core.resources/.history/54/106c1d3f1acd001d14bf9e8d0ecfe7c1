@@ -547,6 +547,15 @@ public class Ventana extends JFrame{
 		lista.setBounds(80, 100,320, 40);
 		listaUsuarios.add(lista);
 		
+		/*JLabel texto5= new JLabel("  Seleccione un usuario");
+		texto5.setFont(new Font("Comic Sans", Font.BOLD,14));
+		texto5.setSize(320, 40);
+		texto5.setLocation(80, 100);
+		texto5.setOpaque(true);
+		texto5.setBackground(Color.white);
+		texto5.setForeground(Color.decode("#C1C1C1"));
+
+		listaUsuarios.add(texto5);*/
 		
 		JButton crear = new JButton("Editar a ''Usuario''");
 		crear.setFont(new Font("Comic Sans", Font.BOLD,14));
@@ -580,7 +589,6 @@ public class Ventana extends JFrame{
 		
 		return listaUsuarios;
 	}
-	
 	public JPanel registro() {
 		
 		anterior = actual;
@@ -602,61 +610,61 @@ public class Ventana extends JFrame{
 		//titleR.setBackground(Color.green);
 		registro.add(titleR);
 		
-		JLabel nombre = new JLabel("Nombre:",JLabel.LEFT);
-		nombre.setFont(new Font("Comic Sans", Font.BOLD,14));
-		nombre.setSize(250, 20);
-		nombre.setLocation(120, 80);
-		nombre.setOpaque(false);
+		JLabel tag1R = new JLabel("Nombre:",JLabel.LEFT);
+		tag1R.setFont(new Font("Comic Sans", Font.BOLD,14));
+		tag1R.setSize(250, 20);
+		tag1R.setLocation(120, 80);
+		tag1R.setOpaque(false);
 		//tag1R.setBackground(Color.black);
-		nombre.setForeground(Color.white);
-		registro.add(nombre);
+		tag1R.setForeground(Color.white);
+		registro.add(tag1R);
 		
-		JTextField nombreT = new JTextField("");
-		nombreT.setSize(250, 40);
-		nombreT.setLocation(120, 100);
-		registro.add(nombreT);
+		JTextField usernameR = new JTextField("");
+		usernameR.setSize(250, 40);
+		usernameR.setLocation(120, 100);
+		registro.add(usernameR);
 		
-		JLabel email = new JLabel("Email:",JLabel.LEFT);
-		email.setFont(new Font("Comic Sans", Font.BOLD,14));
-		email.setSize(250, 20);
-		email.setLocation(120, 140);
-		email.setOpaque(false);
+		JLabel tag2R = new JLabel("Email:",JLabel.LEFT);
+		tag2R.setFont(new Font("Comic Sans", Font.BOLD,14));
+		tag2R.setSize(250, 20);
+		tag2R.setLocation(120, 140);
+		tag2R.setOpaque(false);
 		//tag2R.setBackground(Color.black);
-		email.setForeground(Color.white);
-		registro.add(email);
+		tag2R.setForeground(Color.white);
+		registro.add(tag2R);
 		
-		JTextField emailT = new JTextField();
-		emailT.setSize(250, 40);
-		emailT.setLocation(120, 160);
-		registro.add(emailT);
+		JPasswordField passwordR = new JPasswordField();
+		passwordR.setSize(250, 40);
+		passwordR.setLocation(120, 160);
+		registro.add(passwordR);
 		
-		JLabel contraseña = new JLabel("Contraseña:",JLabel.LEFT);
-		contraseña.setFont(new Font("Comic Sans", Font.BOLD,14));
-		contraseña.setSize(250, 20);
-		contraseña.setLocation(120, 200);
-		contraseña.setOpaque(false);
+		JLabel tag3 = new JLabel("Contraseña:",JLabel.LEFT);
+		tag3.setFont(new Font("Comic Sans", Font.BOLD,14));
+		tag3.setSize(250, 20);
+		tag3.setLocation(120, 200);
+		tag3.setOpaque(false);
 		//tag3.setBackground(Color.black);
-		contraseña.setForeground(Color.white);
-		registro.add(contraseña);
+		tag3.setForeground(Color.white);
+		registro.add(tag3);
 		
-		JPasswordField contraseñaP = new JPasswordField("");
-		contraseñaP.setSize(250, 40);
-		contraseñaP.setLocation(120, 220);
-		registro.add(contraseñaP);
+		JTextField name = new JTextField("");
+		name.setSize(250, 40);
+		name.setLocation(120, 220);
+		registro.add(name);
 		
-		JLabel confirmarContraseña = new JLabel("Confirmar contraseña:",JLabel.LEFT);
-		confirmarContraseña.setFont(new Font("Comic Sans", Font.BOLD,14));
-		confirmarContraseña.setSize(250, 20);
-		confirmarContraseña.setLocation(120, 260);
-		confirmarContraseña.setOpaque(false);
+		JLabel tag4 = new JLabel("Confirmar contraseña:",JLabel.LEFT);
+		tag4.setFont(new Font("Comic Sans", Font.BOLD,14));
+		tag4.setSize(250, 20);
+		tag4.setLocation(120, 260);
+		tag4.setOpaque(false);
 		//tag4.setBackground(Color.black);
-		confirmarContraseña.setForeground(Color.white);
-		registro.add(confirmarContraseña);
+		tag4.setForeground(Color.white);
+		registro.add(tag4);
 		
-		JPasswordField confirmarContraseñaP = new JPasswordField("");
-		confirmarContraseñaP.setSize(250, 40);
-		confirmarContraseñaP.setLocation(120, 280);
-		registro.add(confirmarContraseñaP);
+		JTextField lastname = new JTextField("");
+		lastname.setSize(250, 40);
+		lastname.setLocation(120, 280);
+		registro.add(lastname);
 		
 		JButton crear = new JButton("Crear Usuario");
 		crear.setSize(115,40);
