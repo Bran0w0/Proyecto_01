@@ -1,7 +1,40 @@
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.ScrollPane;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 public class Ventana extends JFrame{
 	
@@ -86,59 +119,6 @@ public class Ventana extends JFrame{
 		
 	}
 	
-	public void confirmarLogin(String email,String pwd) {
-		//------------------------------------------------------------------------------------------------------------------------------------
-						
-						BufferedReader reader;
-						
-						Boolean flag = false; 
-						
-						try{
-							
-							FileReader file = new FileReader("users.txt");
-							reader = new BufferedReader(file);
-							
-							String line = reader.readLine();
-							
-							while(line != null) {
-								
-								String data [] = line.split(",");
-								 
-								if( email.equals(data[2]) ) {
-									if( pwd.equals(data[3]) ) {
-										flag = true;
-									}
-								} 
-								
-								line = reader.readLine();
-								
-							}
-							
-							if(flag) {
-								JOptionPane.showMessageDialog(null,"Bienvenido "+email,"Correcto", JOptionPane.INFORMATION_MESSAGE );
-
-								anterior = actual;
-								actual = "menu";
-								
-								limpiarVentana();
-								
-								repaint();
-								revalidate();
-								
-								
-							}else {
-								JOptionPane.showMessageDialog(null,"El usuario y contraseña no coinciden","Error", JOptionPane.ERROR_MESSAGE );
-							}
-							
-							
-						} catch(IOException e1) {
-							e1.printStackTrace();
-						}
-					
-				//------------------------------------------------------------------------------------------------------------------------------------
-
-	}
-	
 	public JPanel login()
 	{
 		
@@ -194,6 +174,7 @@ public class Ventana extends JFrame{
 			password.setSize(250, 40);
 			password.setLocation(120, 160);
 			jp1.add(password);
+			
 			//------------------------------------------------------------------------------------------------------------------------------------
 
 			btnAccess.addActionListener(new ActionListener() {
@@ -204,13 +185,56 @@ public class Ventana extends JFrame{
 					String email = username.getText();
 					String pwd = new String (password.getPassword());
 					
-					confirmarLogin(email,pwd);
+					BufferedReader reader;
+					
+					Boolean flag = false; 
+					
+					try{
+						
+						FileReader file = new FileReader("users.txt");
+						reader = new BufferedReader(file);
+						
+						String line = reader.readLine();
+						
+						while(line != null) {
+							
+							String data [] = line.split(",");
+							 
+							if( email.equals(data[2]) ) {
+								if( pwd.equals(data[3]) ) {
+									flag = true;
+								}
+							} 
+							
+							line = reader.readLine();
+							
+						}
+						
+						if(flag) {
+							JOptionPane.showMessageDialog(null,"Bienvenido "+email,"Correcto", JOptionPane.INFORMATION_MESSAGE );
+
+							anterior = actual;
+							actual = "menu";
+							
+							limpiarVentana();
+							
+							repaint();
+							revalidate();
+							
+							
+						}else {
+							JOptionPane.showMessageDialog(null,"El usuario y contraseña no coinciden","Error", JOptionPane.ERROR_MESSAGE );
+						}
+						
+						
+					} catch(IOException e1) {
+						e1.printStackTrace();
+					}
 				}
 				
 			});
 			//------------------------------------------------------------------------------------------------------------------------------------
 
-			
 		}else {
 			JTextField username = new JTextField();
 			username.setSize(250, 40);
@@ -231,7 +255,51 @@ public class Ventana extends JFrame{
 					String email = username.getText();
 					String pwd = new String (password.getPassword());
 					
-					confirmarLogin(email,pwd);
+					BufferedReader reader;
+					
+					Boolean flag = false; 
+					
+					try{
+						
+						FileReader file = new FileReader("users.txt");
+						reader = new BufferedReader(file);
+						
+						String line = reader.readLine();
+						
+						while(line != null) {
+							
+							String data [] = line.split(",");
+							 
+							if( email.equals(data[2]) ) {
+								if( pwd.equals(data[3]) ) {
+									flag = true;
+								}
+							} 
+							
+							line = reader.readLine();
+							
+						}
+						
+						if(flag) {
+							JOptionPane.showMessageDialog(null,"Bienvenido "+email,"Correcto", JOptionPane.INFORMATION_MESSAGE );
+
+							anterior = actual;
+							actual = "menu";
+							
+							limpiarVentana();
+							
+							repaint();
+							revalidate();
+							
+							
+						}else {
+							JOptionPane.showMessageDialog(null,"El usuario y contraseña no coinciden","Error", JOptionPane.ERROR_MESSAGE );
+						}
+						
+						
+					} catch(IOException e1) {
+						e1.printStackTrace();
+					}
 				}
 				
 			});
