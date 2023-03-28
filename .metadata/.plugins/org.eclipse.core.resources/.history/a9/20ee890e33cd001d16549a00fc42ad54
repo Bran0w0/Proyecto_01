@@ -751,7 +751,7 @@ public class Ventana extends JFrame{
 				String pwd = new String(contraseñaP.getPassword());
 				String pwd2 = new String(confirmarContraseñaP.getPassword());
 
-				if((email.contains("@")&& pwd.equals(pwd2)) && !(nombre.equals("") || email.equals("") || pwd.equals("") || apellido.equals(""))) 
+				if((email.contains("@")&& pwd.equals(pwd2)) && !(nombre.equals("") || email.equals("") || pwd.equals(""))) 
 
 				{
 				JOptionPane.showMessageDialog(null, "Sistema");
