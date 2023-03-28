@@ -104,14 +104,6 @@ public class Ventana extends JFrame{
 			this.repaint();
 			this.revalidate();
 		}
-		if(actual.equals("miCuenta")){
-			panel = miCuenta();
-			
-			this.add(panel);
-			
-			this.repaint();
-			this.revalidate();
-		}
 		
 	}
 	
@@ -243,34 +235,6 @@ public class Ventana extends JFrame{
 		usuarios.add(listaDeUsuarios);
 		usuarios.add(crearUsuario);
 		ayuda.add(comoCrearUsuario);
-		
-		cerrarSesion.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "login";
-				
-				limpiarVentana();
-			}
-			
-		});
-		
-		miCuenta.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "miCuenta";
-				
-				limpiarVentana();
-			}
-			
-		});
 		
 		listaDeUsuarios.addActionListener(new ActionListener() {
 
