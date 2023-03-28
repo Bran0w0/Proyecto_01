@@ -769,6 +769,8 @@ public class Ventana extends JFrame{
 				lista.getSelectedIndex();
 				seleccion = (String) lista.getSelectedItem();
 				crear.setText("Editar a "+seleccion);
+		        listaUsuarios.repaint();
+		        listaUsuarios.revalidate();
 			}
 			
 		});

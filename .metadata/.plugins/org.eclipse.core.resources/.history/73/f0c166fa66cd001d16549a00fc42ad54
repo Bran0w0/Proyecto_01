@@ -760,7 +760,8 @@ public class Ventana extends JFrame{
 		JComboBox lista = new JComboBox(emailG);
 		lista.setBounds(80, 100,320, 40);
 		listaUsuarios.add(lista);
-		
+        listaUsuarios.repaint();
+        listaUsuarios.revalidate();
 		lista.addActionListener(new ActionListener() {
 
 			@Override
@@ -769,6 +770,8 @@ public class Ventana extends JFrame{
 				lista.getSelectedIndex();
 				seleccion = (String) lista.getSelectedItem();
 				crear.setText("Editar a "+seleccion);
+		        listaUsuarios.repaint();
+		        listaUsuarios.revalidate();
 			}
 			
 		});

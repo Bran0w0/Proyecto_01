@@ -642,7 +642,8 @@ public class Ventana extends JFrame{
 
 		
 		String emailG[] = new String [10];
-		String a;
+		String a,n;
+
 		//----------------------------------------------------------------------------
 
 		String[] columnNames = { "Nombre", "Apellido", "Correo", "Password" };
@@ -688,7 +689,23 @@ public class Ventana extends JFrame{
  		crear.setBackground(Color.decode("#31C148"));
  		crear.setForeground(Color.decode("#FFFFFF"));
  		
+		JComboBox lista = new JComboBox(emailG);
+		lista.setBounds(80, 100,320, 40);
+		listaUsuarios.add(lista);
+		
+		lista.addActionListener(new ActionListener() {
 
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				lista.getSelectedIndex();
+				seleccion = (String) lista.getSelectedItem();
+				crear.setText("Editar a "+seleccion);
+			}
+			
+		});
+         
+ 		listaUsuarios.add(crear);
 
  		//----------------------------------------------------------------------------
  		int lineaEliminar = 2;
@@ -699,10 +716,10 @@ public class Ventana extends JFrame{
 				// TODO Auto-generated method stub
 				for(int z = 0; z<10; z++) {
 					if(seleccion.equals(data[z][2])) {
-						data[z][0]=null;
-						data[z][1]=null;
-						data[z][2]=null;
-						data[z][3]=null;
+						data[z][0]="";
+						data[z][1]="";
+						data[z][2]="";
+						data[z][3]="";
 						JOptionPane.showMessageDialog(null, "Se borro usuario","Exito",JOptionPane.ERROR_MESSAGE );
 						int y = 0;
 						BufferedReader reader;  
@@ -715,9 +732,8 @@ public class Ventana extends JFrame{
 							 
 							 for(int q=0;q<4;q++) {
 								for(int w=0;w<4;w++)	 
-									if(data[q][w]!=null)	{
-										data[q][w]+=",";
-									 linea.print(data[q][w]);  }
+									if(data[q][0]!=null)	
+									 linea.print(data[q][w]);  
 									 
 							 }
 							 linea.println();
@@ -739,15 +755,7 @@ public class Ventana extends JFrame{
 								y++;
 								
 							}
-							int h=0;
-							for (int f =0; f<10;f++) {
-								if(data[f][2]!=null) {
-								String n = data[f][2];
-								emailG[h]=n;
-								System.out.println(emailG);
-								System.out.println(n);}
-								h++;
-							}
+
 						} catch(IOException e1) {
 							e1.printStackTrace();
 						} 		
@@ -757,23 +765,7 @@ public class Ventana extends JFrame{
 			
 		});
 		
-		JComboBox lista = new JComboBox(emailG);
-		lista.setBounds(80, 100,320, 40);
-		listaUsuarios.add(lista);
 		
-		lista.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				lista.getSelectedIndex();
-				seleccion = (String) lista.getSelectedItem();
-				crear.setText("Editar a "+seleccion);
-			}
-			
-		});
-         
- 		listaUsuarios.add(crear);
 
 		JTable j = new JTable(data, columnNames);
         j.setBounds(30, 40, 200, 300);

@@ -643,6 +643,7 @@ public class Ventana extends JFrame{
 		
 		String emailG[] = new String [10];
 		String a;
+
 		//----------------------------------------------------------------------------
 
 		String[] columnNames = { "Nombre", "Apellido", "Correo", "Password" };
@@ -677,6 +678,17 @@ public class Ventana extends JFrame{
 				System.out.println(a);}
 				h++;
 			}
+
+			 JTable j = new JTable(data, columnNames);
+	         j.setBounds(30, 40, 200, 300);
+	 
+	         JScrollPane sp = new JScrollPane(j);
+	         sp.setSize(320, 200);
+	         sp.setLocation(80, 195);
+	         listaUsuarios.add(sp);
+	         
+	         listaUsuarios.repaint();
+	         listaUsuarios.revalidate();
 		} catch(IOException e1) {
 			e1.printStackTrace();
 		} 		
@@ -688,75 +700,6 @@ public class Ventana extends JFrame{
  		crear.setBackground(Color.decode("#31C148"));
  		crear.setForeground(Color.decode("#FFFFFF"));
  		
-
-
- 		//----------------------------------------------------------------------------
- 		int lineaEliminar = 2;
-		Borrar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				for(int z = 0; z<10; z++) {
-					if(seleccion.equals(data[z][2])) {
-						data[z][0]=null;
-						data[z][1]=null;
-						data[z][2]=null;
-						data[z][3]=null;
-						JOptionPane.showMessageDialog(null, "Se borro usuario","Exito",JOptionPane.ERROR_MESSAGE );
-						int y = 0;
-						BufferedReader reader;  
-						FileWriter writer ;
-						
-						try {
-							 writer = new FileWriter("users.txt");
-							 
-							 PrintWriter linea = new PrintWriter(writer);
-							 
-							 for(int q=0;q<4;q++) {
-								for(int w=0;w<4;w++)	 
-									if(data[q][w]!=null)	{
-										data[q][w]+=",";
-									 linea.print(data[q][w]);  }
-									 
-							 }
-							 linea.println();
-
-							 linea.close();
-							 writer.close();
-							FileReader file = new FileReader("users.txt");
-							reader = new BufferedReader(file);
-							
-							String line = reader.readLine();
-														
-							while(line != null) {
-								
-								String arreglo [] = line.split(",");
-								
-								data[y] = arreglo;
-								
-								line = reader.readLine();
-								y++;
-								
-							}
-							int h=0;
-							for (int f =0; f<10;f++) {
-								if(data[f][2]!=null) {
-								String n = data[f][2];
-								emailG[h]=n;
-								System.out.println(emailG);
-								System.out.println(n);}
-								h++;
-							}
-						} catch(IOException e1) {
-							e1.printStackTrace();
-						} 		
-					}
-				}
-			}
-			
-		});
-		
 		JComboBox lista = new JComboBox(emailG);
 		lista.setBounds(80, 100,320, 40);
 		listaUsuarios.add(lista);
@@ -775,13 +718,29 @@ public class Ventana extends JFrame{
          
  		listaUsuarios.add(crear);
 
-		JTable j = new JTable(data, columnNames);
-        j.setBounds(30, 40, 200, 300);
+ 		//----------------------------------------------------------------------------
+		Borrar.addActionListener(new ActionListener() {
 
-        JScrollPane sp = new JScrollPane(j);
-        sp.setSize(320, 200);
-        sp.setLocation(80, 195);
-        listaUsuarios.add(sp);
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				for(int z = 0; z<10; z++) {
+					if(seleccion.equals(data[z][2])) {
+						data[z][0]="";
+						data[z][1]="";
+						data[z][2]="";
+						data[z][3]="";
+						JOptionPane.showMessageDialog(null, "Se borro usuario","Exito",JOptionPane.ERROR_MESSAGE );
+
+					}
+				}
+				//JOptionPane.showMessageDialog(null, "No se puede borrar el usuario","Error",JOptionPane.ERROR_MESSAGE );
+
+				
+			}
+			
+		});
+
 		
         listaUsuarios.repaint();
         listaUsuarios.revalidate();

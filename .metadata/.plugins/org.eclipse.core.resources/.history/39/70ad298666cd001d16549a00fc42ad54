@@ -642,7 +642,8 @@ public class Ventana extends JFrame{
 
 		
 		String emailG[] = new String [10];
-		String a;
+		String a,n;
+
 		//----------------------------------------------------------------------------
 
 		String[] columnNames = { "Nombre", "Apellido", "Correo", "Password" };
@@ -739,15 +740,7 @@ public class Ventana extends JFrame{
 								y++;
 								
 							}
-							int h=0;
-							for (int f =0; f<10;f++) {
-								if(data[f][2]!=null) {
-								String n = data[f][2];
-								emailG[h]=n;
-								System.out.println(emailG);
-								System.out.println(n);}
-								h++;
-							}
+
 						} catch(IOException e1) {
 							e1.printStackTrace();
 						} 		
