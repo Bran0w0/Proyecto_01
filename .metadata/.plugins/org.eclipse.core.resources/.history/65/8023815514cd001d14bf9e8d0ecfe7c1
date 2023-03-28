@@ -320,6 +320,98 @@ public class Ventana extends JFrame{
 		menu.setBackground(Color.decode("#76D09A"));
 		
 		barra();
+		/*JMenuBar barra=new JMenuBar();
+		JMenu cuenta = new JMenu("Cuenta");
+		JMenu usuarios = new JMenu("Usuarios");
+		JMenu ayuda = new JMenu("Ayuda");
+		JMenuItem miCuenta = new JMenuItem("Mi cuenta");
+		JMenuItem cerrarSesion = new JMenuItem("Cerrar sesión");
+
+		JMenuItem listaDeUsuarios = new JMenuItem("Lista de usuarios");
+		JMenuItem crearUsuario = new JMenuItem("Crear Usuario");
+
+		JMenuItem comoCrearUsuario = new JMenuItem("¿Como crear usuarios?");
+		//BARRA
+		menu.add(barra);
+		//MENUS
+		barra.add(cuenta);
+		barra.add(usuarios);
+		barra.add(ayuda);
+		//ITEMS
+		cuenta.add(miCuenta);
+		cuenta.add(cerrarSesion);
+		usuarios.add(listaDeUsuarios);
+		usuarios.add(crearUsuario);
+		ayuda.add(comoCrearUsuario);
+		
+		cerrarSesion.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				anterior = actual;
+				actual = "login";
+				
+				limpiarVentana();
+			}
+			
+		});
+		
+		miCuenta.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				anterior = actual;
+				actual = "miCuenta";
+				
+				limpiarVentana();
+			}
+			
+		});
+		
+		listaDeUsuarios.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				anterior = actual;
+				actual = "listaUsuarios";
+				
+				limpiarVentana();
+			}
+			
+		});
+		
+		crearUsuario.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				anterior = actual;
+				actual = "registro";
+				
+				limpiarVentana();
+			}
+			
+		});
+		comoCrearUsuario.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				anterior = actual;
+				actual = "ayuda";
+				
+				limpiarVentana();
+			}
+			
+		});*/
 		
 		//titulo
 		JLabel titleR = new JLabel("Hola Usuario",JLabel.CENTER);
@@ -330,6 +422,7 @@ public class Ventana extends JFrame{
 		//titleR.setBackground(Color.green);
 		menu.add(titleR);
 		
+		//setJMenuBar(barra);
 
 		return menu;
 	}

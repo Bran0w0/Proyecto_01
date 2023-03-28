@@ -210,8 +210,15 @@ public class Ventana extends JFrame{
 		
 	}
 	
-	public void  barra() {
+	public JPanel menu() {
+		anterior = actual;
+		actual = "menu";
 		
+		JPanel menu = new JPanel();
+		menu.setSize(500, 700);
+		menu.setLocation(0, 0);
+		menu.setLayout(null);
+		menu.setBackground(Color.decode("#76D09A"));
 		
 		JMenuBar barra=new JMenuBar();
 		JMenu cuenta = new JMenu("Cuenta");
@@ -225,6 +232,7 @@ public class Ventana extends JFrame{
 
 		JMenuItem comoCrearUsuario = new JMenuItem("¿Como crear usuarios?");
 		//BARRA
+		menu.add(barra);
 		//MENUS
 		barra.add(cuenta);
 		barra.add(usuarios);
@@ -305,22 +313,6 @@ public class Ventana extends JFrame{
 			
 		});
 		
-		setJMenuBar(barra);
-
-	}
-	
-	public JPanel menu() {
-		anterior = actual;
-		actual = "menu";
-		
-		JPanel menu = new JPanel();
-		menu.setSize(500, 700);
-		menu.setLocation(0, 0);
-		menu.setLayout(null);
-		menu.setBackground(Color.decode("#76D09A"));
-		
-		barra();
-		
 		//titulo
 		JLabel titleR = new JLabel("Hola Usuario",JLabel.CENTER);
 		titleR.setFont(new Font("Comic Sans", Font.BOLD,20));
@@ -330,6 +322,7 @@ public class Ventana extends JFrame{
 		//titleR.setBackground(Color.green);
 		menu.add(titleR);
 		
+		setJMenuBar(barra);
 
 		return menu;
 	}
@@ -345,8 +338,6 @@ public class Ventana extends JFrame{
 		ayuda.setLocation(0, 0);
 		ayuda.setLayout(null);
 		ayuda.setBackground(Color.decode("#76D09A"));
-		
-		//barra();
 		
 		//titulo
 		JLabel titleR = new JLabel("¿Como crear un usuario?",JLabel.CENTER);
