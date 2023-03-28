@@ -12,6 +12,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
@@ -39,6 +42,7 @@ public class Ventana extends JFrame{
 	private String actual = "login";
 	public JPanel panel = null;
 	public JScrollPane sp = new JScrollPane();
+	//int h=0;
 
 	public Ventana() {
 			
@@ -572,6 +576,9 @@ public class Ventana extends JFrame{
 		});
 		
 		String [] datos = {};
+		String emailG[] = new String [10];
+		String a;
+
 		//----------------------------------------------------------------------------
 
 		String[] columnNames = { "Nombre", "Apellido", "Correo", "Password" };
@@ -590,7 +597,9 @@ public class Ventana extends JFrame{
 			while(line != null) {
 				
 				String arreglo [] = line.split(",");
-				datos = line.split("@");
+				datos = arreglo;
+
+				
 				
 				data[i] = arreglo;
 				
@@ -598,7 +607,22 @@ public class Ventana extends JFrame{
 				i++;
 				
 			}
-			
+			int h=0;
+			for (int f =0; f<10;f++) {
+				if(data[f][2]!=null) {
+				 a = data[f][2];
+				/* if(a.contains("@")) {
+					 emailG[h]=data[f][2];
+						h++; 
+				 }*/
+				//emailG[0]=a;
+				emailG[h]=a;
+				System.out.println(emailG);
+				System.out.println(a);}
+				h++;
+			}
+
+			 
 			 JTable j = new JTable(data, columnNames);
 	         j.setBounds(30, 40, 200, 300);
 	 
@@ -612,19 +636,15 @@ public class Ventana extends JFrame{
 		} catch(IOException e1) {
 			e1.printStackTrace();
 		} 		
+
+	/*	for(int l=0;l <datos.length;l++) {
+			System.out.println(emailG[l]);
+		}*/
 		
-		JComboBox lista = new JComboBox(datos);
+		JComboBox lista = new JComboBox(emailG);
 		lista.setBounds(80, 100,320, 40);
 		listaUsuarios.add(lista);
-		
-		/* JTable j = new JTable(data, columnNames);
-         j.setBounds(30, 40, 200, 300);
- 
-         // adding it to JScrollPane
-         JScrollPane sp = new JScrollPane(j);
-         sp.setSize(300, 400);
-         sp.setLocation(120, 200);
-         listaUsuarios.add(sp);*/
+
          
          listaUsuarios.repaint();
          listaUsuarios.revalidate();
@@ -773,6 +793,8 @@ public class Ventana extends JFrame{
 					e1.printStackTrace();
 				}
 				
+				}else {
+					JOptionPane.showMessageDialog(null, "Verifique que los datos estén correctos");
 				}
 			}
 		});
