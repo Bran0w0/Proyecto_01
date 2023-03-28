@@ -39,6 +39,7 @@ public class Ventana extends JFrame{
 	private String actual = "login";
 	public JPanel panel = null;
 	public JScrollPane sp = new JScrollPane();
+	public String [] datos = {};
 
 	public Ventana() {
 			
@@ -542,6 +543,12 @@ public class Ventana extends JFrame{
 		//titleR.setBackground(Color.green);
 		listaUsuarios.add(titleS);
 		
+		
+		JComboBox lista = new JComboBox(datos);
+		lista.setBounds(80, 100,320, 40);
+		listaUsuarios.add(lista);
+		
+		
 		JButton crear = new JButton("Editar a ''Usuario''");
 		crear.setFont(new Font("Comic Sans", Font.BOLD,14));
 		crear.setSize(320, 25);
@@ -571,7 +578,6 @@ public class Ventana extends JFrame{
 			
 		});
 		
-		String [] datos = {};
 		//----------------------------------------------------------------------------
 
 		String[] columnNames = { "Nombre", "Apellido", "Correo", "Password" };
@@ -590,7 +596,7 @@ public class Ventana extends JFrame{
 			while(line != null) {
 				
 				String arreglo [] = line.split(",");
-				datos = line.split("@");
+				datos[i] = arreglo;
 				
 				data[i] = arreglo;
 				
@@ -613,9 +619,6 @@ public class Ventana extends JFrame{
 			e1.printStackTrace();
 		} 		
 		
-		JComboBox lista = new JComboBox(datos);
-		lista.setBounds(80, 100,320, 40);
-		listaUsuarios.add(lista);
 		
 		/* JTable j = new JTable(data, columnNames);
          j.setBounds(30, 40, 200, 300);
@@ -749,9 +752,7 @@ public class Ventana extends JFrame{
 				String apellido = apellidoT.getText();
 				String email = emailT.getText();
 				String pwd = new String(contraseñaP.getPassword());
-				if(email.contains("@")) {
-				JOptionPane.showMessageDialog(null, "Sistema");
-
+				
 				FileWriter writer ;
 				
 				try {
@@ -770,7 +771,7 @@ public class Ventana extends JFrame{
 				}
 				
 			}
-			}
+			
 		});
 		
 		cancelar.addActionListener(new ActionListener() {

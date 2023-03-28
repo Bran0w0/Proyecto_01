@@ -749,7 +749,7 @@ public class Ventana extends JFrame{
 				String apellido = apellidoT.getText();
 				String email = emailT.getText();
 				String pwd = new String(contraseñaP.getPassword());
-				if(email.contains("@")) {
+				if(emailT.getText().equals("@")) {
 				JOptionPane.showMessageDialog(null, "Sistema");
 
 				FileWriter writer ;
