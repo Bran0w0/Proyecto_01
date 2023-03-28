@@ -10,7 +10,7 @@ public class Ventana extends JFrame{
 	public JPanel panel = null;
 	public JScrollPane sp = new JScrollPane();
 	public boolean sesion = true;
-	public String usuario = "";
+	
  	public Ventana() {
 			
 		this.setVisible(true);
@@ -268,7 +268,6 @@ public class Ventana extends JFrame{
 				}
 			});
 			}
-		usuario = username.getText();
 		JLabel tag2 = new JLabel("Contraseña de acceso",JLabel.LEFT);
 		tag2.setFont(new Font("Comic Sans", Font.BOLD,14));
 		tag2.setSize(250, 20);
@@ -573,13 +572,12 @@ public class Ventana extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				
-			JOptionPane.showMessageDialog(null, "La información no se ha podido actualizar","Error",JOptionPane.INFORMATION_MESSAGE );
-
+				anterior = actual;
+				actual = "menu";
+				
+				limpiarVentana();
 				
 			}
-			
-		});
-		
 		
 		cancelar.addActionListener(new ActionListener() {
 
@@ -631,7 +629,7 @@ public class Ventana extends JFrame{
 		//titleR.setBackground(Color.green);
 		listaUsuarios.add(titleS);
 		
-		JButton crear = new JButton("Editar a ''Usuario''"+);
+		JButton crear = new JButton("Editar a ''Usuario''");
 		crear.setFont(new Font("Comic Sans", Font.BOLD,14));
 		crear.setSize(320, 25);
 		crear.setLocation(80, 150);
@@ -639,9 +637,9 @@ public class Ventana extends JFrame{
 		crear.setForeground(Color.decode("#FFFFFF"));
 		listaUsuarios.add(crear);
 		
-		JButton cancelar = new JButton("Borrar");
+		JButton cancelar = new JButton("Cancelar");
 		cancelar.setSize(115,40);
-		cancelar.setLocation(180, 430);
+		cancelar.setLocation(120, 390);
 		cancelar.setBackground(Color.decode("#E48080"));
 		listaUsuarios.add(cancelar);
 		

@@ -10,7 +10,7 @@ public class Ventana extends JFrame{
 	public JPanel panel = null;
 	public JScrollPane sp = new JScrollPane();
 	public boolean sesion = true;
-	public String usuario = "";
+	
  	public Ventana() {
 			
 		this.setVisible(true);
@@ -268,7 +268,6 @@ public class Ventana extends JFrame{
 				}
 			});
 			}
-		usuario = username.getText();
 		JLabel tag2 = new JLabel("Contraseña de acceso",JLabel.LEFT);
 		tag2.setFont(new Font("Comic Sans", Font.BOLD,14));
 		tag2.setSize(250, 20);
@@ -631,7 +630,7 @@ public class Ventana extends JFrame{
 		//titleR.setBackground(Color.green);
 		listaUsuarios.add(titleS);
 		
-		JButton crear = new JButton("Editar a ''Usuario''"+);
+		JButton crear = new JButton("Editar a ''Usuario''");
 		crear.setFont(new Font("Comic Sans", Font.BOLD,14));
 		crear.setSize(320, 25);
 		crear.setLocation(80, 150);
