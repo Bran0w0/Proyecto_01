@@ -96,14 +96,6 @@ public class Ventana extends JFrame{
 			this.repaint();
 			this.revalidate();
 		}
-		if(actual.equals("listaUsuarios")){
-			panel = listaUsuarios();
-			
-			this.add(panel);
-			
-			this.repaint();
-			this.revalidate();
-		}
 		
 	}
 	
@@ -237,20 +229,6 @@ public class Ventana extends JFrame{
 		usuarios.add(crearUsuario);
 		ayuda.add(comoCrearUsuario);
 		
-		listaDeUsuarios.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "listaUsuarios";
-				
-				limpiarVentana();
-			}
-			
-		});
-		
 		crearUsuario.addActionListener(new ActionListener() {
 
 			@Override
@@ -291,9 +269,7 @@ public class Ventana extends JFrame{
 
 		return menu;
 	}
-
-	public JPanel ayuda() {
-
+public JPanel ayuda() {
 		
 		anterior = actual;
 		actual = "ayuda";
@@ -351,128 +327,6 @@ public class Ventana extends JFrame{
 		});
 		
 		return ayuda;
-	}
-	
-	public JPanel listaUsuarios() {
-		
-		anterior = actual;
-		actual = "listaUsuarios";
-		
-		JPanel listaUsuarios = new JPanel();
-		listaUsuarios.setSize(500, 700);
-		listaUsuarios.setLocation(0, 0);
-		listaUsuarios.setLayout(null);
-		listaUsuarios.setBackground(Color.decode("#76D09A"));
-		
-		//titulo
-		JLabel titleR = new JLabel("Crear Usuario",JLabel.CENTER);
-		titleR.setFont(new Font("Comic Sans", Font.BOLD,24));
-		titleR.setSize(280, 40);
-		titleR.setLocation(100, 20);
-		titleR.setOpaque(false);
-		titleR.setForeground(Color.white);
-		//titleR.setBackground(Color.green);
-		listaUsuarios.add(titleR);
-		
-		JLabel tag1R = new JLabel("Nombre:",JLabel.LEFT);
-		tag1R.setFont(new Font("Comic Sans", Font.BOLD,14));
-		tag1R.setSize(250, 20);
-		tag1R.setLocation(120, 80);
-		tag1R.setOpaque(false);
-		//tag1R.setBackground(Color.black);
-		tag1R.setForeground(Color.white);
-		listaUsuarios.add(tag1R);
-		
-		JTextField usernameR = new JTextField("");
-		usernameR.setSize(250, 40);
-		usernameR.setLocation(120, 100);
-		listaUsuarios.add(usernameR);
-		
-		JLabel tag2R = new JLabel("Email:",JLabel.LEFT);
-		tag2R.setFont(new Font("Comic Sans", Font.BOLD,14));
-		tag2R.setSize(250, 20);
-		tag2R.setLocation(120, 140);
-		tag2R.setOpaque(false);
-		//tag2R.setBackground(Color.black);
-		tag2R.setForeground(Color.white);
-		listaUsuarios.add(tag2R);
-		
-		JPasswordField passwordR = new JPasswordField();
-		passwordR.setSize(250, 40);
-		passwordR.setLocation(120, 160);
-		listaUsuarios.add(passwordR);
-		
-		JLabel tag3 = new JLabel("Contraseña:",JLabel.LEFT);
-		tag3.setFont(new Font("Comic Sans", Font.BOLD,14));
-		tag3.setSize(250, 20);
-		tag3.setLocation(120, 200);
-		tag3.setOpaque(false);
-		//tag3.setBackground(Color.black);
-		tag3.setForeground(Color.white);
-		listaUsuarios.add(tag3);
-		
-		JTextField name = new JTextField("");
-		name.setSize(250, 40);
-		name.setLocation(120, 220);
-		listaUsuarios.add(name);
-		
-		JLabel tag4 = new JLabel("Confirmar contraseña:",JLabel.LEFT);
-		tag4.setFont(new Font("Comic Sans", Font.BOLD,14));
-		tag4.setSize(250, 20);
-		tag4.setLocation(120, 260);
-		tag4.setOpaque(false);
-		//tag4.setBackground(Color.black);
-		tag4.setForeground(Color.white);
-		listaUsuarios.add(tag4);
-		
-		JTextField lastname = new JTextField("");
-		lastname.setSize(250, 40);
-		lastname.setLocation(120, 280);
-		listaUsuarios.add(lastname);
-		
-		JButton crear = new JButton("Crear Usuario");
-		crear.setSize(115,40);
-		crear.setLocation(255, 390);
-		crear.setBackground(Color.decode("#3DADFF"));
-		listaUsuarios.add(crear);
-		
-		JButton cancelar = new JButton("Cancelar");
-		cancelar.setSize(115,40);
-		cancelar.setLocation(120, 390);
-		cancelar.setBackground(Color.decode("#E48080"));
-		listaUsuarios.add(cancelar);
-		
-		cancelar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "menu";
-				
-				limpiarVentana();
-				
-			}
-			
-		});
-		
-		crear.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "menu";
-				
-				limpiarVentana();
-				
-			}
-			
-		});
-		
-		return listaUsuarios;
 	}
 	public JPanel registro() {
 		

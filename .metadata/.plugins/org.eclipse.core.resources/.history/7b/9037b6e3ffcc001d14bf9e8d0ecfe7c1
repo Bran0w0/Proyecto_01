@@ -237,20 +237,6 @@ public class Ventana extends JFrame{
 		usuarios.add(crearUsuario);
 		ayuda.add(comoCrearUsuario);
 		
-		listaDeUsuarios.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				anterior = actual;
-				actual = "listaUsuarios";
-				
-				limpiarVentana();
-			}
-			
-		});
-		
 		crearUsuario.addActionListener(new ActionListener() {
 
 			@Override
@@ -356,7 +342,7 @@ public class Ventana extends JFrame{
 	public JPanel listaUsuarios() {
 		
 		anterior = actual;
-		actual = "listaUsuarios";
+		actual = "registro";
 		
 		JPanel listaUsuarios = new JPanel();
 		listaUsuarios.setSize(500, 700);
