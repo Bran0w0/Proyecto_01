@@ -606,71 +606,57 @@ public class Ventana extends JFrame{
 		JLabel nombre = new JLabel("Nombre:",JLabel.LEFT);
 		nombre.setFont(new Font("Comic Sans", Font.BOLD,14));
 		nombre.setSize(250, 20);
-		nombre.setLocation(120, 90);
+		nombre.setLocation(120, 80);
 		nombre.setOpaque(false);
 		//tag1R.setBackground(Color.black);
 		nombre.setForeground(Color.white);
 		registro.add(nombre);
 		
 		JTextField nombreT = new JTextField("");
-		nombreT.setSize(250, 25);
-		nombreT.setLocation(120, 110);
+		nombreT.setSize(250, 40);
+		nombreT.setLocation(120, 100);
 		registro.add(nombreT);
-		
-		JLabel apellido = new JLabel("Apellido:",JLabel.LEFT);
-		apellido.setFont(new Font("Comic Sans", Font.BOLD,14));
-		apellido.setSize(250, 20);
-		apellido.setLocation(120, 140);
-		apellido.setOpaque(false);
-		//tag1R.setBackground(Color.black);
-		apellido.setForeground(Color.white);
-		registro.add(apellido);
-		
-		JTextField apellidoT = new JTextField("");
-		apellidoT.setSize(250, 25);
-		apellidoT.setLocation(120, 160);
-		registro.add(apellidoT);
 		
 		JLabel email = new JLabel("Email:",JLabel.LEFT);
 		email.setFont(new Font("Comic Sans", Font.BOLD,14));
 		email.setSize(250, 20);
-		email.setLocation(120, 190);
+		email.setLocation(120, 140);
 		email.setOpaque(false);
 		//tag2R.setBackground(Color.black);
 		email.setForeground(Color.white);
 		registro.add(email);
 		
 		JTextField emailT = new JTextField();
-		emailT.setSize(250, 25);
-		emailT.setLocation(120, 210);
+		emailT.setSize(250, 40);
+		emailT.setLocation(120, 160);
 		registro.add(emailT);
 		
 		JLabel contraseña = new JLabel("Contraseña:",JLabel.LEFT);
 		contraseña.setFont(new Font("Comic Sans", Font.BOLD,14));
 		contraseña.setSize(250, 20);
-		contraseña.setLocation(120, 240);
+		contraseña.setLocation(120, 200);
 		contraseña.setOpaque(false);
 		//tag3.setBackground(Color.black);
 		contraseña.setForeground(Color.white);
 		registro.add(contraseña);
 		
 		JPasswordField contraseñaP = new JPasswordField("");
-		contraseñaP.setSize(250, 25);
-		contraseñaP.setLocation(120, 260);
+		contraseñaP.setSize(250, 40);
+		contraseñaP.setLocation(120, 220);
 		registro.add(contraseñaP);
 		
 		JLabel confirmarContraseña = new JLabel("Confirmar contraseña:",JLabel.LEFT);
 		confirmarContraseña.setFont(new Font("Comic Sans", Font.BOLD,14));
 		confirmarContraseña.setSize(250, 20);
-		confirmarContraseña.setLocation(120, 290);
+		confirmarContraseña.setLocation(120, 260);
 		confirmarContraseña.setOpaque(false);
 		//tag4.setBackground(Color.black);
 		confirmarContraseña.setForeground(Color.white);
 		registro.add(confirmarContraseña);
 		
 		JPasswordField confirmarContraseñaP = new JPasswordField("");
-		confirmarContraseñaP.setSize(250, 25);
-		confirmarContraseñaP.setLocation(120, 310);
+		confirmarContraseñaP.setSize(250, 40);
+		confirmarContraseñaP.setLocation(120, 280);
 		registro.add(confirmarContraseñaP);
 		
 		JButton crear = new JButton("Crear Usuario");
@@ -684,38 +670,6 @@ public class Ventana extends JFrame{
 		cancelar.setLocation(120, 390);
 		cancelar.setBackground(Color.decode("#E48080"));
 		registro.add(cancelar);
-		
-		/*crear.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				String nombre = name.getText();
-				String apellido = nombreT.getText();
-				String email = usernameR.getText();
-				String pwd = new String(passwordR.getPassword());
-				
-				FileWriter writer ;
-				
-				try {
-					 writer = new FileWriter("users.txt",true);
-					 
-					 PrintWriter linea = new PrintWriter(writer);
-					 
-					 linea.println(nombre+","+apellido+","+email+","+pwd);  
-					 
-					 linea.close();
-					 writer.close();
-					
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				
-			}
-			
-		});*/
 		
 		cancelar.addActionListener(new ActionListener() {
 

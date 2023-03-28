@@ -606,7 +606,7 @@ public class Ventana extends JFrame{
 		JLabel nombre = new JLabel("Nombre:",JLabel.LEFT);
 		nombre.setFont(new Font("Comic Sans", Font.BOLD,14));
 		nombre.setSize(250, 20);
-		nombre.setLocation(120, 90);
+		nombre.setLocation(120, 40);
 		nombre.setOpaque(false);
 		//tag1R.setBackground(Color.black);
 		nombre.setForeground(Color.white);
@@ -614,27 +614,27 @@ public class Ventana extends JFrame{
 		
 		JTextField nombreT = new JTextField("");
 		nombreT.setSize(250, 25);
-		nombreT.setLocation(120, 110);
+		nombreT.setLocation(120, 60);
 		registro.add(nombreT);
 		
 		JLabel apellido = new JLabel("Apellido:",JLabel.LEFT);
 		apellido.setFont(new Font("Comic Sans", Font.BOLD,14));
 		apellido.setSize(250, 20);
-		apellido.setLocation(120, 140);
+		apellido.setLocation(120, 80);
 		apellido.setOpaque(false);
 		//tag1R.setBackground(Color.black);
-		apellido.setForeground(Color.white);
+		nombre.setForeground(Color.white);
 		registro.add(apellido);
 		
 		JTextField apellidoT = new JTextField("");
 		apellidoT.setSize(250, 25);
-		apellidoT.setLocation(120, 160);
+		apellidoT.setLocation(120, 100);
 		registro.add(apellidoT);
 		
 		JLabel email = new JLabel("Email:",JLabel.LEFT);
 		email.setFont(new Font("Comic Sans", Font.BOLD,14));
 		email.setSize(250, 20);
-		email.setLocation(120, 190);
+		email.setLocation(120, 140);
 		email.setOpaque(false);
 		//tag2R.setBackground(Color.black);
 		email.setForeground(Color.white);
@@ -642,13 +642,13 @@ public class Ventana extends JFrame{
 		
 		JTextField emailT = new JTextField();
 		emailT.setSize(250, 25);
-		emailT.setLocation(120, 210);
+		emailT.setLocation(120, 160);
 		registro.add(emailT);
 		
 		JLabel contraseña = new JLabel("Contraseña:",JLabel.LEFT);
 		contraseña.setFont(new Font("Comic Sans", Font.BOLD,14));
 		contraseña.setSize(250, 20);
-		contraseña.setLocation(120, 240);
+		contraseña.setLocation(120, 220);
 		contraseña.setOpaque(false);
 		//tag3.setBackground(Color.black);
 		contraseña.setForeground(Color.white);
@@ -656,7 +656,7 @@ public class Ventana extends JFrame{
 		
 		JPasswordField contraseñaP = new JPasswordField("");
 		contraseñaP.setSize(250, 25);
-		contraseñaP.setLocation(120, 260);
+		contraseñaP.setLocation(120, 250);
 		registro.add(contraseñaP);
 		
 		JLabel confirmarContraseña = new JLabel("Confirmar contraseña:",JLabel.LEFT);

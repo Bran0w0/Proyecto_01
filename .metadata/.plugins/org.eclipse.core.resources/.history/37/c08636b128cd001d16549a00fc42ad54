@@ -606,7 +606,7 @@ public class Ventana extends JFrame{
 		JLabel nombre = new JLabel("Nombre:",JLabel.LEFT);
 		nombre.setFont(new Font("Comic Sans", Font.BOLD,14));
 		nombre.setSize(250, 20);
-		nombre.setLocation(120, 90);
+		nombre.setLocation(120, 70);
 		nombre.setOpaque(false);
 		//tag1R.setBackground(Color.black);
 		nombre.setForeground(Color.white);
@@ -614,13 +614,13 @@ public class Ventana extends JFrame{
 		
 		JTextField nombreT = new JTextField("");
 		nombreT.setSize(250, 25);
-		nombreT.setLocation(120, 110);
+		nombreT.setLocation(120, 90);
 		registro.add(nombreT);
 		
 		JLabel apellido = new JLabel("Apellido:",JLabel.LEFT);
 		apellido.setFont(new Font("Comic Sans", Font.BOLD,14));
 		apellido.setSize(250, 20);
-		apellido.setLocation(120, 140);
+		apellido.setLocation(120, 130);
 		apellido.setOpaque(false);
 		//tag1R.setBackground(Color.black);
 		apellido.setForeground(Color.white);
@@ -628,7 +628,7 @@ public class Ventana extends JFrame{
 		
 		JTextField apellidoT = new JTextField("");
 		apellidoT.setSize(250, 25);
-		apellidoT.setLocation(120, 160);
+		apellidoT.setLocation(120, 150);
 		registro.add(apellidoT);
 		
 		JLabel email = new JLabel("Email:",JLabel.LEFT);
