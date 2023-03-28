@@ -374,38 +374,25 @@ public class Ventana extends JFrame{
 		//titleR.setBackground(Color.green);
 		listaUsuarios.add(titleR);
 		
-		//SUBTITULO
-		JLabel titleS = new JLabel("Editar",JLabel.LEFT);
-		titleS.setFont(new Font("Comic Sans", Font.BOLD,18));
-		titleS.setSize(280, 40);
-		titleS.setLocation(80, 60);
-		titleS.setOpaque(false);
-		titleS.setForeground(Color.white);
-		//titleR.setBackground(Color.green);
-		listaUsuarios.add(titleS);
-		
 		String [] datos = {"1","2","3"};
 		
 		JComboBox lista = new JComboBox(datos);
-		lista.setBounds(80, 100,320, 40);
-		listaUsuarios.add(lista);
+		lista.setBounds(150 ,480,50,20);
+		this.add(lista);
 		
-		/*JLabel texto5= new JLabel("  Seleccione un usuario");
-		texto5.setFont(new Font("Comic Sans", Font.BOLD,14));
-		texto5.setSize(320, 40);
-		texto5.setLocation(80, 100);
+		JLabel texto5= new JLabel("Selecciones país");
+		texto5.setSize(200,12);
+		texto5.setLocation(150,450);
 		texto5.setOpaque(true);
-		texto5.setBackground(Color.white);
-		texto5.setForeground(Color.decode("#C1C1C1"));
+		texto5.setBackground(Color.CYAN);
+		texto5.setForeground(Color.BLACK);
 
-		listaUsuarios.add(texto5);*/
+		this.add(texto5);
 		
-		JButton crear = new JButton("Editar a ''Usuario''");
-		crear.setFont(new Font("Comic Sans", Font.BOLD,14));
-		crear.setSize(320, 25);
-		crear.setLocation(80, 150);
-		crear.setBackground(Color.decode("#31C148"));
-		crear.setForeground(Color.decode("#FFFFFF"));
+		JButton crear = new JButton("Crear Usuario");
+		crear.setSize(115,40);
+		crear.setLocation(255, 390);
+		crear.setBackground(Color.decode("#3DADFF"));
 		listaUsuarios.add(crear);
 		
 		JButton cancelar = new JButton("Cancelar");

@@ -405,7 +405,7 @@ public class Ventana extends JFrame{
 		crear.setSize(320, 25);
 		crear.setLocation(80, 150);
 		crear.setBackground(Color.decode("#31C148"));
-		crear.setForeground(Color.decode("#FFFFFF"));
+		crear.setForeground(Color.decode("#C1C1C1"));
 		listaUsuarios.add(crear);
 		
 		JButton cancelar = new JButton("Cancelar");

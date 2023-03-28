@@ -401,11 +401,9 @@ public class Ventana extends JFrame{
 		listaUsuarios.add(texto5);*/
 		
 		JButton crear = new JButton("Editar a ''Usuario''");
-		crear.setFont(new Font("Comic Sans", Font.BOLD,14));
-		crear.setSize(320, 25);
-		crear.setLocation(80, 150);
-		crear.setBackground(Color.decode("#31C148"));
-		crear.setForeground(Color.decode("#FFFFFF"));
+		crear.setSize(320, 20);
+		crear.setLocation(80, 120);
+		crear.setBackground(Color.decode("#3DADFF"));
 		listaUsuarios.add(crear);
 		
 		JButton cancelar = new JButton("Cancelar");
