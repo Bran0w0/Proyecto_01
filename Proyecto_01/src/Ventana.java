@@ -10,6 +10,7 @@ public class Ventana extends JFrame{
 	public JPanel panel = null;
 	public JScrollPane sp = new JScrollPane();
 	public boolean sesion = true;
+	
  	public Ventana() {
 			
 		this.setVisible(true);
@@ -25,8 +26,11 @@ public class Ventana extends JFrame{
 		
 		this.repaint();
 		this.revalidate();
-		
+
 	}
+ 	public void timer() {
+ 		
+ 	}
 	
 	public void limpiarVentana() {
 		
@@ -182,19 +186,48 @@ public class Ventana extends JFrame{
 		btnCancelar.setLocation(120,205);
 		btnCancelar.setBackground(Color.decode("#E48080"));
 		jp1.add(btnCancelar);
+		JTextField username = new JTextField();
+		JPasswordField password = new JPasswordField();
+
 		
+		
+		btnCancelar.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				
+				sesion = false;
+				if(sesion == false) {
+					username.setText("");
+					username.setSize(250, 40);
+					username.setLocation(120, 100);
+					jp1.add(username);
+					
+					password.setText("");
+					password.setSize(250, 40);
+					password.setLocation(120, 160);
+					jp1.add(password);
+
+					jp1.repaint();
+					jp1.revalidate();
+					}
+			}
+		});
 
 		if(sesion == true) {
-			JTextField username = new JTextField("1@");
+			username.setText("1@");
 			username.setSize(250, 40);
 			username.setLocation(120, 100);
 			jp1.add(username);
 			
-			JPasswordField password = new JPasswordField("1");
+			password.setText("1");
 			password.setSize(250, 40);
 			password.setLocation(120, 160);
 			jp1.add(password);
-			//------------------------------------------------------------------------------------------------------------------------------------
+			
+			jp1.repaint();
+			jp1.revalidate();
 
 			btnAccess.addActionListener(new ActionListener() {
 
@@ -205,40 +238,36 @@ public class Ventana extends JFrame{
 					String pwd = new String (password.getPassword());
 					
 					confirmarLogin(email,pwd);
+					jp1.repaint();
+					jp1.revalidate();
 				}
-				
 			});
-			//------------------------------------------------------------------------------------------------------------------------------------
-
-			
-		}else {
-			JTextField username = new JTextField();
-			username.setSize(250, 40);
-			username.setLocation(120, 100);
-			jp1.add(username);
-			JPasswordField password = new JPasswordField();
-			password.setSize(250, 40);
-			password.setLocation(120, 160);
-			jp1.add(password);
-			
-			//------------------------------------------------------------------------------------------------------------------------------------
-
-			btnAccess.addActionListener(new ActionListener() {
-
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					// TODO Auto-generated method stub
-					String email = username.getText();
-					String pwd = new String (password.getPassword());
-					
-					confirmarLogin(email,pwd);
-				}
-				
-			});
-			//------------------------------------------------------------------------------------------------------------------------------------
-
-			}
+		}
 		
+		if(sesion == false) {
+			username.setText("");
+			username.setSize(250, 40);
+			username.setLocation(120, 100);
+			jp1.add(username);
+			
+			password.setText("");
+			password.setSize(250, 40);
+			password.setLocation(120, 160);
+			jp1.add(password);
+			btnAccess.addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					String email = username.getText();
+					String pwd = new String (password.getPassword());
+					
+					confirmarLogin(email,pwd);
+					jp1.repaint();
+					jp1.revalidate();
+				}
+			});
+			}
 		JLabel tag2 = new JLabel("Contraseña de acceso",JLabel.LEFT);
 		tag2.setFont(new Font("Comic Sans", Font.BOLD,14));
 		tag2.setSize(250, 20);
@@ -248,20 +277,8 @@ public class Ventana extends JFrame{
 		tag2.setForeground(Color.white);
 		jp1.add(tag2);
 		
-		btnCancelar.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
-				
-				
-				anterior = actual;
-				actual = "registro";
-				
-				limpiarVentana();
-				
-			}
-		});
+		jp1.repaint();
+		jp1.revalidate();
 				
 		this.add(jp1);
 		return jp1;

@@ -1,0 +1,61 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import javax.swing.*;
+
+public class Ventana extends JFrame{
+	
+	private String anterior = "login";
+	private String actual = "login";
+	public JPanel panel = null;
+	public JScrollPane sp = new JScrollPane();
+	public boolean sesion = true;
+	   private JPanel panel1;
+
+ 	public Ventana() {
+			
+		this.setVisible(true);
+		this.setSize(500, 600);
+		this.setLocationRelativeTo(null);
+		this.setTitle("Hola mundo");
+		
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setLayout(null);
+		this.getContentPane().setBackground(Color.decode("#76D09A"));
+		
+		
+		this.repaint();
+		this.revalidate();
+	      // Crea un panel que mostrará durante 3 segundos
+	      panel = new JPanel();
+	      panel.add(new JLabel("Este panel aparecerá durante 3 segundos"));
+	      add(panel);
+
+	      // Crea un Timer que oculta el panel después de 3 segundos
+	      Timer timer = new Timer(3000, new ActionListener() {
+	         public void actionPerformed(ActionEvent e) {
+	            panel.setVisible(false);
+	         }
+	      });
+	      timer.setRepeats(false); // El Timer sólo se ejecutará una vez
+	      timer.start(); // Inicia el Timer
+
+	      // Muestra otros paneles después de que el Timer haya finalizado
+	      JPanel otroPanel = new JPanel();
+	      otroPanel.add(new JLabel("Este es otro panel"));
+	      add(otroPanel);
+
+	      // Configura la ventana
+	      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	      pack();
+	      setVisible(true);
+	   }
+
+	   public static void main(String[] args) {
+	      new Ventana();
+	   }
+
+	
+ 
+
+}
